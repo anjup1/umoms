@@ -1,4 +1,4 @@
-[ERROR] 2019-09-28 12:26:14,923 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 12:59:20,603 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -20,7 +20,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:26:14,944 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 12:59:20,617 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -42,7 +42,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:27:15,112 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:00:20,796 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -64,7 +64,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:27:15,114 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:00:20,799 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -86,7 +86,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:28:15,283 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:01:20,952 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -108,7 +108,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:28:15,285 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:01:20,954 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -130,7 +130,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:29:15,446 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:02:21,146 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -152,7 +152,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:29:15,448 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:02:21,148 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -174,7 +174,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:30:15,607 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:03:21,322 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -196,7 +196,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:30:15,609 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:03:21,324 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -218,7 +218,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:31:15,795 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:04:21,509 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -240,7 +240,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:31:15,797 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:04:21,511 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -262,7 +262,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:32:15,960 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:05:21,684 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -284,7 +284,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:32:15,962 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:05:21,687 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -306,7 +306,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:33:16,125 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:06:21,848 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -328,7 +328,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:33:16,127 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:06:21,850 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -350,7 +350,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:34:16,324 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:07:22,011 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -372,7 +372,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:34:16,326 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:07:22,013 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -394,7 +394,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:35:16,500 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:08:22,185 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -416,7 +416,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:35:16,502 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:08:22,187 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -438,7 +438,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:36:16,665 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:09:22,350 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -460,7 +460,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:36:16,667 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:09:22,352 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -482,7 +482,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:37:16,838 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:10:22,530 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -504,7 +504,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:37:16,840 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:10:22,532 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -526,7 +526,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:38:17,009 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:11:22,702 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -548,7 +548,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:38:17,011 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:11:22,704 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -570,7 +570,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:39:17,185 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:12:22,859 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -592,7 +592,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:39:17,187 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:12:22,861 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -614,7 +614,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:40:17,347 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:13:23,039 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -636,7 +636,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:40:17,349 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:13:23,041 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -658,7 +658,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:41:17,514 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:14:23,203 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -680,7 +680,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:41:17,516 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:14:23,206 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -702,7 +702,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:42:17,687 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:15:23,373 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -724,7 +724,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:42:17,689 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:15:23,375 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -746,7 +746,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:43:17,854 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:16:23,557 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -768,7 +768,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:43:17,856 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:16:23,559 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -790,7 +790,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:44:18,034 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:17:23,724 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -812,7 +812,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:44:18,036 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:17:23,726 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -834,7 +834,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:45:18,211 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:18:23,907 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -856,7 +856,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:45:18,213 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:18:23,909 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -878,7 +878,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:46:18,383 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:19:24,073 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -900,7 +900,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:46:18,385 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:19:24,075 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -922,7 +922,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:47:18,555 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:20:24,235 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -944,7 +944,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:47:18,556 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:20:24,237 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -966,7 +966,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:48:18,726 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:21:24,406 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -988,7 +988,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:48:18,728 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:21:24,408 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1010,7 +1010,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:49:18,884 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:22:24,566 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1032,7 +1032,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:49:18,887 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:22:24,568 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1054,7 +1054,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:50:19,054 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:23:24,762 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1076,7 +1076,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:50:19,056 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:23:24,764 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1098,7 +1098,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:51:19,245 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:24:24,920 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1120,7 +1120,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:51:19,247 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:24:24,922 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1142,7 +1142,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:52:19,417 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:25:25,078 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1164,7 +1164,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:52:19,419 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:25:25,081 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1186,7 +1186,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:53:19,593 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:26:25,269 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1208,7 +1208,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:53:19,595 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:26:25,271 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1230,7 +1230,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:54:19,769 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:27:25,433 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1252,7 +1252,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:54:19,771 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:27:25,436 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1274,7 +1274,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:55:19,936 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:28:25,590 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1296,7 +1296,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:55:19,939 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:28:25,592 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1318,7 +1318,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:56:20,092 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:29:25,768 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1340,7 +1340,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:56:20,094 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:29:25,770 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1362,7 +1362,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:57:20,266 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:30:25,949 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1384,7 +1384,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:57:20,268 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:30:25,951 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
@@ -1406,7 +1406,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:58:20,436 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:31:26,115 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site1
 Exception in Enqueue Events for Site moms-site1
 Traceback (most recent call last):
@@ -1428,7 +1428,7 @@ Traceback (most recent call last):
     raise exc
 OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
 
-[ERROR] 2019-09-28 12:58:20,438 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+[ERROR] 2019-09-28 13:31:26,117 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: moms-site2
 Exception in Enqueue Events for Site moms-site2
 Traceback (most recent call last):
