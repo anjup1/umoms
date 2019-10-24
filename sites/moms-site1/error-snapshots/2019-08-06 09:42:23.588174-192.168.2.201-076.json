@@ -1,0 +1,313 @@
+{
+ "etype": "NameError", 
+ "evalue": "NameError(\"global name 'skip_attendance' is not defined\",)", 
+ "exception": {
+  "args": "(\"global name 'skip_attendance' is not defined\",)", 
+  "message": "\"global name 'skip_attendance' is not defined\""
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/' [POST]>)", 
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/umoms/moms-bench/apps/frappe/frappe/handler.pyc'>", 
+    "frappe.handler. handle": "<function handle>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "response": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:", 
+    "61": "\t\t\tresponse = frappe.handler.handle()", 
+    "62": "", 
+    "63": "\t\telif frappe.request.path.startswith(\"/api/\"):"
+   }, 
+   "lnum": 61
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "cmd": "u'frappe.model.workflow.apply_workflow'", 
+    "data": "None", 
+    "global execute_cmd": "<function execute_cmd>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "handle", 
+   "lines": {
+    "19": "", 
+    "20": "\tif cmd!='login':", 
+    "21": "\t\tdata = execute_cmd(cmd)", 
+    "22": "", 
+    "23": "\t# data can be an empty string or list which are valid responses"
+   }, 
+   "lnum": 21
+  }, 
+  {
+   "call": "(cmd=u'frappe.model.workflow.apply_workflow', from_async=False)", 
+   "dump": {
+    "frappe. call": "<function call>", 
+    "frappe. form_dict": "{'action': u'Approve', 'doc': u'{\"creation\":\"201..., 'cmd': u'frappe.model.workflow.apply_workflow'}", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "method": "<function apply_workflow>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "execute_cmd", 
+   "lines": {
+    "54": "\tis_whitelisted(method)", 
+    "55": "", 
+    "56": "\treturn frappe.call(method, **frappe.form_dict)", 
+    "57": "", 
+    "58": ""
+   }, 
+   "lnum": 56
+  }, 
+  {
+   "call": "(fn=<function apply_workflow>, *args=(), **kwargs={'action': u'Approve', 'cmd': u'frappe.model.workflow.apply_workflow', 'doc': u'{\"creation\":\"2019-08-06 09:37:28.107475\",\"doct...75\",\"__last_sync_on\":\"2019-08-06T04:12:25.612Z\"}'})", 
+   "dump": {
+    "args": "()", 
+    "fn": "<function apply_workflow>", 
+    "newargs": "{'action': u'Approve', 'doc': u'{\"creation\":\"2019-08-06 09:37:28.107475\",\"doct...75\",\"__last_sync_on\":\"2019-08-06T04:12:25.612Z\"}'}"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", 
+   "func": "call", 
+   "lines": {
+    "1034": "\tnewargs = get_newargs(fn, kwargs)", 
+    "1035": "", 
+    "1036": "\treturn fn(*args, **newargs)", 
+    "1037": "", 
+    "1038": "def get_newargs(fn, kwargs):"
+   }, 
+   "lnum": 1036
+  }, 
+  {
+   "call": "(doc=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>, action=u'Approve')", 
+   "dump": {
+    "doc": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>", 
+    "doc. submit": "<bound method AttendanceRequest.submit of <erpne...est.attendance_request.AttendanceRequest object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/workflow.py", 
+   "func": "apply_workflow", 
+   "lines": {
+    "90": "\t\tdoc.save()", 
+    "91": "\telif doc.docstatus == 0 and new_docstatus == 1:", 
+    "92": "\t\tdoc.submit()", 
+    "93": "\telif doc.docstatus == 1 and new_docstatus == 1:", 
+    "94": "\t\tdoc.save()"
+   }, 
+   "lnum": 92
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>)", 
+   "dump": {
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>", 
+    "self. _submit": "<bound method AttendanceRequest._submit of <erpn...est.attendance_request.AttendanceRequest object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "submit", 
+   "lines": {
+    "846": "\tdef submit(self):", 
+    "847": "\t\t\"\"\"Submit the document. Sets `docstatus` = 1, then saves.\"\"\"", 
+    "848": "\t\tself._submit()", 
+    "849": "", 
+    "850": "\t@whitelist.__func__"
+   }, 
+   "lnum": 848
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>)", 
+   "dump": {
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>", 
+    "self. save": "<bound method AttendanceRequest.save of <erpnext...est.attendance_request.AttendanceRequest object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "_submit", 
+   "lines": {
+    "835": "\t\t\"\"\"Submit the document. Sets `docstatus` = 1, then saves.\"\"\"", 
+    "836": "\t\tself.docstatus = 1", 
+    "837": "\t\tself.save()", 
+    "838": "", 
+    "839": "\t@whitelist.__func__"
+   }, 
+   "lnum": 837
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>, *args=(), **kwargs={})", 
+   "dump": {
+    "args": "()", 
+    "kwargs": "{}", 
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>", 
+    "self. _save": "<bound method AttendanceRequest._save of <erpnex...est.attendance_request.AttendanceRequest object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "save", 
+   "lines": {
+    "258": "\tdef save(self, *args, **kwargs):", 
+    "259": "\t\t\"\"\"Wrapper for _save\"\"\"", 
+    "260": "\t\treturn self._save(*args, **kwargs)", 
+    "261": "", 
+    "262": "\tdef _save(self, ignore_permissions=None, ignore_version=None):"
+   }, 
+   "lnum": 260
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>, ignore_permissions=None, ignore_version=None)", 
+   "dump": {
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>", 
+    "self. run_post_save_methods": "<bound method AttendanceRequest.run_post_save_me...est.attendance_request.AttendanceRequest object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "_save", 
+   "lines": {
+    "311": "", 
+    "312": "\t\tself.update_children()", 
+    "313": "\t\tself.run_post_save_methods()", 
+    "314": "", 
+    "315": "\t\treturn self"
+   }, 
+   "lnum": 313
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>)", 
+   "dump": {
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>", 
+    "self. run_method": "<bound method AttendanceRequest.run_method of <e...est.attendance_request.AttendanceRequest object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "run_post_save_methods", 
+   "lines": {
+    "906": "\t\telif self._action==\"submit\":", 
+    "907": "\t\t\tself.run_method(\"on_update\")", 
+    "908": "\t\t\tself.run_method(\"on_submit\")", 
+    "909": "\t\telif self._action==\"cancel\":", 
+    "910": "\t\t\tself.run_method(\"on_cancel\")"
+   }, 
+   "lnum": 908
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>, method=u'on_submit', *args=(), **kwargs={})", 
+   "dump": {
+    "Document. hook": "<function hook>", 
+    "args": "()", 
+    "fn": "<function on_submit>", 
+    "global Document": "<class 'frappe.model.document.Document'>", 
+    "kwargs": "{}", 
+    "out": "undefined", 
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "run_method", 
+   "lines": {
+    "770": "", 
+    "771": "\t\tfn.__name__ = str(method)", 
+    "772": "\t\tout = Document.hook(fn)(self, *args, **kwargs)", 
+    "773": "", 
+    "774": "\t\tself.run_notifications(method)"
+   }, 
+   "lnum": 772
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>, *args=(), **kwargs={})", 
+   "dump": {
+    "args": "()", 
+    "composed": "<function runner>", 
+    "kwargs": "{}", 
+    "method": "'on_submit'", 
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "composer", 
+   "lines": {
+    "1046": "", 
+    "1047": "\t\t\tcomposed = compose(f, *hooks)", 
+    "1048": "\t\t\treturn composed(self, method, *args, **kwargs)", 
+    "1049": "", 
+    "1050": "\t\treturn composer"
+   }, 
+   "lnum": 1048
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>, method='on_submit', *args=(), **kwargs={})", 
+   "dump": {
+    "add_to_return_value": "<function add_to_return_value>", 
+    "args": "()", 
+    "fn": "<function on_submit>", 
+    "kwargs": "{}", 
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "runner", 
+   "lines": {
+    "1029": "\t\tdef compose(fn, *hooks):", 
+    "1030": "\t\t\tdef runner(self, method, *args, **kwargs):", 
+    "1031": "\t\t\t\tadd_to_return_value(self, fn(self, *args, **kwargs))", 
+    "1032": "\t\t\t\tfor f in hooks:", 
+    "1033": "\t\t\t\t\tadd_to_return_value(self, f(self, method, *args, **kwargs))"
+   }, 
+   "lnum": 1031
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>, *args=(), **kwargs={})", 
+   "dump": {
+    "args": "()", 
+    "builtin getattr": "<built-in function getattr>", 
+    "fn": "undefined", 
+    "kwargs": "{}", 
+    "method": "u'on_submit'", 
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "<lambda>", 
+   "lines": {
+    "764": "", 
+    "765": "\t\tif hasattr(self, method) and hasattr(getattr(self, method), \"__call__\"):", 
+    "766": "\t\t\tfn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)", 
+    "767": "\t\telse:", 
+    "768": "\t\t\t# hack! to run hooks even if method does not exist"
+   }, 
+   "lnum": 766
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>)", 
+   "dump": {
+    "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>", 
+    "self. create_attendance": "<bound method AttendanceRequest.create_attendanc...est.attendance_request.AttendanceRequest object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/attendance_request/attendance_request.py", 
+   "func": "on_submit", 
+   "lines": {
+    "20": "", 
+    "21": "\tdef on_submit(self):", 
+    "22": "\t\tself.create_attendance()", 
+    "23": "", 
+    "24": "\tdef on_cancel(self):"
+   }, 
+   "lnum": 22
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>)", 
+   "dump": {
+    "skip_attendance": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/attendance_request/attendance_request.py", 
+   "func": "create_attendance", 
+   "lines": {
+    "34": "\t\t\tattendance_date = add_days(self.from_date, number)", 
+    "35": "\t\t\tskip_attendance = self.validate_if_attendance_not_applicable(attendance_date)", 
+    "36": "", 
+    "37": "\t\t\tif not skip_attendance:", 
+    "38": "\t\t\t\tattendance = frappe.new_doc(\"Attendance\")"
+   }, 
+   "lnum": 36
+  }
+ ], 
+ "locals": {
+  "attendance_date": "'2019-08-04'", 
+  "number": "0", 
+  "request_days": "1", 
+  "self": "<erpnext.hr.doctype.attendance_request.attendance_request.AttendanceRequest object>"
+ }, 
+ "pyver": "Python 2.7.15rc1: /home/umoms/moms-bench/env/bin/python (prefix: /home/umoms/moms-bench/env)", 
+ "timestamp": "2019-08-06 09:42:23.588372", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 61, in application\n    response = frappe.handler.handle()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 21, in handle\n    data = execute_cmd(cmd)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 56, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/__init__.py\", line 1036, in call\n    return fn(*args, **newargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/workflow.py\", line 92, in apply_workflow\n    doc.submit()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 848, in submit\n    self._submit()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 837, in _submit\n    self.save()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 260, in save\n    return self._save(*args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 313, in _save\n    self.run_post_save_methods()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 908, in run_post_save_methods\n    self.run_method(\"on_submit\")\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 772, in run_method\n    out = Document.hook(fn)(self, *args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 1048, in composer\n    return composed(self, method, *args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 1031, in runner\n    add_to_return_value(self, fn(self, *args, **kwargs))\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 766, in <lambda>\n    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/attendance_request/attendance_request.py\", line 22, in on_submit\n    self.create_attendance()\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/attendance_request/attendance_request.py\", line 36, in create_attendance\nNameError: global name 'skip_attendance' is not defined\n"
+}

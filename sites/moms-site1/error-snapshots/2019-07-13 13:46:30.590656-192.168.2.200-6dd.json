@@ -1,0 +1,486 @@
+{
+ "etype": "AttributeError", 
+ "evalue": "AttributeError(\"'SalaryDetail' object has no attribute 'depends_on_payment_days'\",)", 
+ "exception": {
+  "args": "(\"'SalaryDetail' object has no attribute 'depends_on_payment_days'\",)", 
+  "message": "\"'SalaryDetail' object has no attribute 'depends_on_payment_days'\""
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/' [POST]>)", 
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/umoms/moms-bench/apps/frappe/frappe/handler.pyc'>", 
+    "frappe.handler. handle": "<function handle>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "response": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:", 
+    "61": "\t\t\tresponse = frappe.handler.handle()", 
+    "62": "", 
+    "63": "\t\telif frappe.request.path.startswith(\"/api/\"):"
+   }, 
+   "lnum": 61
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "cmd": "u'runserverobj'", 
+    "data": "None", 
+    "global execute_cmd": "<function execute_cmd>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "handle", 
+   "lines": {
+    "19": "", 
+    "20": "\tif cmd!='login':", 
+    "21": "\t\tdata = execute_cmd(cmd)", 
+    "22": "", 
+    "23": "\t# data can be an empty string or list which are valid responses"
+   }, 
+   "lnum": 21
+  }, 
+  {
+   "call": "(cmd=u'runserverobj', from_async=False)", 
+   "dump": {
+    "frappe. call": "<function call>", 
+    "frappe. form_dict": "{'docs': u'{\"docstatus\":0,\"doctype\":\"Salary Slip...rverobj', 'method': u'get_emp_and_leave_details'}", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "method": "<function runserverobj>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "execute_cmd", 
+   "lines": {
+    "54": "\tis_whitelisted(method)", 
+    "55": "", 
+    "56": "\treturn frappe.call(method, **frappe.form_dict)", 
+    "57": "", 
+    "58": ""
+   }, 
+   "lnum": 56
+  }, 
+  {
+   "call": "(fn=<function runserverobj>, *args=(), **kwargs={'cmd': u'runserverobj', 'docs': u'{\"docstatus\":0,\"doctype\":\"Salary Slip\",\"name\":...glus Private Limited\",\"employee\":\"HR-EMP-00015\"}', 'method': u'get_emp_and_leave_details'})", 
+   "dump": {
+    "args": "()", 
+    "fn": "<function runserverobj>", 
+    "newargs": "{'docs': u'{\"docstatus\":0,\"doctype\":\"Salary Slip\",\"name\":...glus Private Limited\",\"employee\":\"HR-EMP-00015\"}', 'method': u'get_emp_and_leave_details'}"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", 
+   "func": "call", 
+   "lines": {
+    "1034": "\tnewargs = get_newargs(fn, kwargs)", 
+    "1035": "", 
+    "1036": "\treturn fn(*args, **newargs)", 
+    "1037": "", 
+    "1038": "def get_newargs(fn, kwargs):"
+   }, 
+   "lnum": 1036
+  }, 
+  {
+   "call": "(method=u'get_emp_and_leave_details', docs=u'{\"docstatus\":0,\"doctype\":\"Salary Slip\",\"name\":...glus Private Limited\",\"employee\":\"HR-EMP-00015\"}', dt=None, dn=None, arg=None, args=None)", 
+   "dump": {
+    "arg": "None", 
+    "args": "None", 
+    "dn": "None", 
+    "docs": "u'{\"docstatus\":0,\"doctype\":\"Salary Slip\",\"name\":...glus Private Limited\",\"employee\":\"HR-EMP-00015\"}'", 
+    "dt": "None", 
+    "frappe. desk": "<module 'frappe.desk' from '/home/umoms/moms-bench/apps/frappe/frappe/desk/__init__.pyc'>", 
+    "frappe.desk. form": "<module 'frappe.desk.form' from '/home/umoms/moms-bench/apps/frappe/frappe/desk/form/__init__.pyc'>", 
+    "frappe.desk.form. run_method": "<module 'frappe.desk.form.run_method' from '/hom...nch/apps/frappe/frappe/desk/form/run_method.pyc'>", 
+    "frappe.desk.form.run_method. runserverobj": "<function runserverobj>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "method": "u'get_emp_and_leave_details'"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "runserverobj", 
+   "lines": {
+    "82": "@frappe.whitelist()", 
+    "83": "def runserverobj(method, docs=None, dt=None, dn=None, arg=None, args=None):", 
+    "84": "\tfrappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)", 
+    "85": "", 
+    "86": "@frappe.whitelist(allow_guest=True)"
+   }, 
+   "lnum": 84
+  }, 
+  {
+   "call": "(method=u'get_emp_and_leave_details', docs=u'{\"docstatus\":0,\"doctype\":\"Salary Slip\",\"name\":...glus Private Limited\",\"employee\":\"HR-EMP-00015\"}', dt=None, dn=None, arg=None, args=u'')", 
+   "dump": {
+    "doc": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>", 
+    "doc. run_method": "<bound method SalarySlip.run_method of <erpnext....ctype.salary_slip.salary_slip.SalarySlip object>>", 
+    "method": "u'get_emp_and_leave_details'", 
+    "r": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/run_method.py", 
+   "func": "runserverobj", 
+   "lines": {
+    "34": "\t\tfnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))", 
+    "35": "\t\tif not fnargs or (len(fnargs)==1 and fnargs[0]==\"self\"):", 
+    "36": "\t\t\tr = doc.run_method(method)", 
+    "37": "", 
+    "38": "\t\telif \"args\" in fnargs or not isinstance(args, dict):"
+   }, 
+   "lnum": 36
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, method=u'get_emp_and_leave_details', *args=(), **kwargs={})", 
+   "dump": {
+    "Document. hook": "<function hook>", 
+    "args": "()", 
+    "fn": "<function get_emp_and_leave_details>", 
+    "global Document": "<class 'frappe.model.document.Document'>", 
+    "kwargs": "{}", 
+    "out": "undefined", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "run_method", 
+   "lines": {
+    "770": "", 
+    "771": "\t\tfn.__name__ = str(method)", 
+    "772": "\t\tout = Document.hook(fn)(self, *args, **kwargs)", 
+    "773": "", 
+    "774": "\t\tself.run_notifications(method)"
+   }, 
+   "lnum": 772
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, *args=(), **kwargs={})", 
+   "dump": {
+    "args": "()", 
+    "composed": "<function runner>", 
+    "kwargs": "{}", 
+    "method": "'get_emp_and_leave_details'", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "composer", 
+   "lines": {
+    "1046": "", 
+    "1047": "\t\t\tcomposed = compose(f, *hooks)", 
+    "1048": "\t\t\treturn composed(self, method, *args, **kwargs)", 
+    "1049": "", 
+    "1050": "\t\treturn composer"
+   }, 
+   "lnum": 1048
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, method='get_emp_and_leave_details', *args=(), **kwargs={})", 
+   "dump": {
+    "add_to_return_value": "<function add_to_return_value>", 
+    "args": "()", 
+    "fn": "<function get_emp_and_leave_details>", 
+    "kwargs": "{}", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "runner", 
+   "lines": {
+    "1029": "\t\tdef compose(fn, *hooks):", 
+    "1030": "\t\t\tdef runner(self, method, *args, **kwargs):", 
+    "1031": "\t\t\t\tadd_to_return_value(self, fn(self, *args, **kwargs))", 
+    "1032": "\t\t\t\tfor f in hooks:", 
+    "1033": "\t\t\t\t\tadd_to_return_value(self, f(self, method, *args, **kwargs))"
+   }, 
+   "lnum": 1031
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, *args=(), **kwargs={})", 
+   "dump": {
+    "args": "()", 
+    "builtin getattr": "<built-in function getattr>", 
+    "fn": "undefined", 
+    "kwargs": "{}", 
+    "method": "u'get_emp_and_leave_details'", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "<lambda>", 
+   "lines": {
+    "764": "", 
+    "765": "\t\tif hasattr(self, method) and hasattr(getattr(self, method), \"__call__\"):", 
+    "766": "\t\t\tfn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)", 
+    "767": "\t\telse:", 
+    "768": "\t\t\t# hack! to run hooks even if method does not exist"
+   }, 
+   "lnum": 766
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>)", 
+   "dump": {
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>", 
+    "self. pull_sal_struct": "<bound method SalarySlip.pull_sal_struct of <erp...ctype.salary_slip.salary_slip.SalarySlip object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py", 
+   "func": "get_emp_and_leave_details", 
+   "lines": {
+    "130": "\t\t\t\tself.salary_slip_based_on_timesheet = self._salary_structure_doc.salary_slip_based_on_timesheet or 0", 
+    "131": "\t\t\t\tself.set_time_sheet()", 
+    "132": "\t\t\t\tself.pull_sal_struct()", 
+    "133": "", 
+    "134": "\tdef set_time_sheet(self):"
+   }, 
+   "lnum": 132
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>)", 
+   "dump": {
+    "make_salary_slip": "<function make_salary_slip>", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>", 
+    "self. _salary_structure_doc": "<erpnext.hr.doctype.salary_structure.salary_structure.SalaryStructure object>", 
+    "self._salary_structure_doc. name": "u'Gross_18000_With_OT'"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py", 
+   "func": "pull_sal_struct", 
+   "lines": {
+    "180": "\t\t\tself.add_earning_for_hourly_wages(self, self._salary_structure_doc.salary_component, wages_amount)", 
+    "181": "", 
+    "182": "\t\tmake_salary_slip(self._salary_structure_doc.name, self)", 
+    "183": "", 
+    "184": "\tdef get_leave_details(self, joining_date=None, relieving_date=None, lwp=None, for_preview=0):"
+   }, 
+   "lnum": 182
+  }, 
+  {
+   "call": "(source_name=u'Gross_18000_With_OT', target_doc=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, employee=None, as_print=False, print_format=None, for_preview=0)", 
+   "dump": {
+    "builtin True": "True", 
+    "ignore_child_tables": "undefined", 
+    "postprocess": "<function postprocess>", 
+    "target_doc": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_structure/salary_structure.py", 
+   "func": "make_salary_slip", 
+   "lines": {
+    "158": "\t\t\t}", 
+    "159": "\t\t}", 
+    "160": "\t}, target_doc, postprocess, ignore_child_tables=True)", 
+    "161": "", 
+    "162": "\tif cint(as_print):"
+   }, 
+   "lnum": 160
+  }, 
+  {
+   "call": "(from_doctype=u'Salary Structure', from_docname=u'Gross_18000_With_OT', table_maps={u'Salary Structure': {u'doctype': u'Salary Slip', u'field_map': {u'name': u'salary_structure', u'total_earning': u'gross_pay'}}}, target_doc=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, postprocess=<function postprocess>, ignore_permissions=False, ignore_child_tables=True)", 
+   "dump": {
+    "postprocess": "<function postprocess>", 
+    "source_doc": "<erpnext.hr.doctype.salary_structure.salary_structure.SalaryStructure object>", 
+    "target_doc": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/mapper.py", 
+   "func": "get_mapped_doc", 
+   "lines": {
+    "111": "", 
+    "112": "\tif postprocess:", 
+    "113": "\t\tpostprocess(source_doc, target_doc)", 
+    "114": "", 
+    "115": "\ttarget_doc.set_onload(\"load_after_mapping\", True)"
+   }, 
+   "lnum": 113
+  }, 
+  {
+   "call": "(source=<erpnext.hr.doctype.salary_structure.salary_structure.SalaryStructure object>, target=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>)", 
+   "dump": {
+    "for_preview": "0", 
+    "target": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>", 
+    "target. run_method": "<bound method SalarySlip.run_method of <erpnext....ctype.salary_slip.salary_slip.SalarySlip object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_structure/salary_structure.py", 
+   "func": "postprocess", 
+   "lines": {
+    "148": "\t\t\ttarget.designation = employee_details.designation", 
+    "149": "\t\t\ttarget.department = employee_details.department", 
+    "150": "\t\ttarget.run_method('process_salary_structure', for_preview=for_preview)", 
+    "151": "", 
+    "152": "\tdoc = get_mapped_doc(\"Salary Structure\", source_name, {"
+   }, 
+   "lnum": 150
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, method=u'process_salary_structure', *args=(), **kwargs={'for_preview': 0})", 
+   "dump": {
+    "Document. hook": "<function hook>", 
+    "args": "()", 
+    "fn": "<function process_salary_structure>", 
+    "global Document": "<class 'frappe.model.document.Document'>", 
+    "kwargs": "{'for_preview': 0}", 
+    "out": "undefined", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "run_method", 
+   "lines": {
+    "770": "", 
+    "771": "\t\tfn.__name__ = str(method)", 
+    "772": "\t\tout = Document.hook(fn)(self, *args, **kwargs)", 
+    "773": "", 
+    "774": "\t\tself.run_notifications(method)"
+   }, 
+   "lnum": 772
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, *args=(), **kwargs={'for_preview': 0})", 
+   "dump": {
+    "args": "()", 
+    "composed": "<function runner>", 
+    "kwargs": "{'for_preview': 0}", 
+    "method": "'process_salary_structure'", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "composer", 
+   "lines": {
+    "1046": "", 
+    "1047": "\t\t\tcomposed = compose(f, *hooks)", 
+    "1048": "\t\t\treturn composed(self, method, *args, **kwargs)", 
+    "1049": "", 
+    "1050": "\t\treturn composer"
+   }, 
+   "lnum": 1048
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, method='process_salary_structure', *args=(), **kwargs={'for_preview': 0})", 
+   "dump": {
+    "add_to_return_value": "<function add_to_return_value>", 
+    "args": "()", 
+    "fn": "<function process_salary_structure>", 
+    "kwargs": "{'for_preview': 0}", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "runner", 
+   "lines": {
+    "1029": "\t\tdef compose(fn, *hooks):", 
+    "1030": "\t\t\tdef runner(self, method, *args, **kwargs):", 
+    "1031": "\t\t\t\tadd_to_return_value(self, fn(self, *args, **kwargs))", 
+    "1032": "\t\t\t\tfor f in hooks:", 
+    "1033": "\t\t\t\t\tadd_to_return_value(self, f(self, method, *args, **kwargs))"
+   }, 
+   "lnum": 1031
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, *args=(), **kwargs={'for_preview': 0})", 
+   "dump": {
+    "args": "()", 
+    "builtin getattr": "<built-in function getattr>", 
+    "fn": "undefined", 
+    "kwargs": "{'for_preview': 0}", 
+    "method": "u'process_salary_structure'", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", 
+   "func": "<lambda>", 
+   "lines": {
+    "764": "", 
+    "765": "\t\tif hasattr(self, method) and hasattr(getattr(self, method), \"__call__\"):", 
+    "766": "\t\t\tfn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)", 
+    "767": "\t\telse:", 
+    "768": "\t\t\t# hack! to run hooks even if method does not exist"
+   }, 
+   "lnum": 766
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, for_preview=0)", 
+   "dump": {
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>", 
+    "self. calculate_net_pay": "<bound method SalarySlip.calculate_net_pay of <e...ctype.salary_slip.salary_slip.SalarySlip object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py", 
+   "func": "process_salary_structure", 
+   "lines": {
+    "819": "\t\tself.pull_emp_details()", 
+    "820": "\t\tself.get_leave_details(for_preview=for_preview)", 
+    "821": "\t\tself.calculate_net_pay()", 
+    "822": "", 
+    "823": "\tdef pull_emp_details(self):"
+   }, 
+   "lnum": 821
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>)", 
+   "dump": {
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>", 
+    "self. calculate_component_amounts": "<bound method SalarySlip.calculate_component_amo...ctype.salary_slip.salary_slip.SalarySlip object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py", 
+   "func": "calculate_net_pay", 
+   "lines": {
+    "290": "\tdef calculate_net_pay(self):", 
+    "291": "\t\tif self.salary_structure:", 
+    "292": "\t\t\tself.calculate_component_amounts()", 
+    "293": "", 
+    "294": "\t\tself.gross_pay = self.get_component_totals(\"earnings\")"
+   }, 
+   "lnum": 292
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>)", 
+   "dump": {
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>", 
+    "self. add_structure_components": "<bound method SalarySlip.add_structure_component...ctype.salary_slip.salary_slip.SalarySlip object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py", 
+   "func": "calculate_component_amounts", 
+   "lines": {
+    "306": "\t\tpayroll_period = get_payroll_period(self.start_date, self.end_date, self.company)", 
+    "307": "", 
+    "308": "\t\tself.add_structure_components()", 
+    "309": "\t\tself.add_employee_benefits(payroll_period)", 
+    "310": "\t\tself.add_additional_salary_components()"
+   }, 
+   "lnum": 308
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>)", 
+   "dump": {
+    "amount": "18000.0", 
+    "key": "u'earnings'", 
+    "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>", 
+    "self. update_component_row": "<bound method SalarySlip.update_component_row of...ctype.salary_slip.salary_slip.SalarySlip object>>", 
+    "struct_row": "<erpnext.hr.doctype.salary_detail.salary_detail.SalaryDetail object>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py", 
+   "func": "add_structure_components", 
+   "lines": {
+    "318": "\t\t\t\tamount = self.eval_condition_and_formula(struct_row, data)", 
+    "319": "\t\t\t\tif amount and struct_row.statistical_component == 0:", 
+    "320": "\t\t\t\t\tself.update_component_row(struct_row, amount, key)", 
+    "321": "", 
+    "322": "\tdef get_data_for_eval(self):"
+   }, 
+   "lnum": 320
+  }, 
+  {
+   "call": "(self=<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>, struct_row=<erpnext.hr.doctype.salary_detail.salary_detail.SalaryDetail object>, amount=18000.0, key=u'earnings', overwrite=1)", 
+   "dump": {
+    "struct_row": "<erpnext.hr.doctype.salary_detail.salary_detail.SalaryDetail object>", 
+    "struct_row.depends_on_payment_days": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py", 
+   "func": "update_component_row", 
+   "lines": {
+    "429": "\t\t\t\t\t'amount': amount,", 
+    "430": "\t\t\t\t\t'default_amount': amount if not struct_row.get(\"is_additional_component\") else 0,", 
+    "431": "\t\t\t\t\t'depends_on_payment_days' : struct_row.depends_on_payment_days,", 
+    "432": "\t\t\t\t\t'salary_component' : struct_row.salary_component,", 
+    "433": "\t\t\t\t\t'abbr' : struct_row.abbr,"
+   }, 
+   "lnum": 431
+  }
+ ], 
+ "locals": {
+  "amount": "18000.0", 
+  "component_row": "None", 
+  "d": "<erpnext.hr.doctype.salary_detail.salary_detail.SalaryDetail object>", 
+  "key": "u'earnings'", 
+  "overwrite": "1", 
+  "self": "<erpnext.hr.doctype.salary_slip.salary_slip.SalarySlip object>", 
+  "struct_row": "<erpnext.hr.doctype.salary_detail.salary_detail.SalaryDetail object>"
+ }, 
+ "pyver": "Python 2.7.15rc1: /home/umoms/moms-bench/env/bin/python (prefix: /home/umoms/moms-bench/env)", 
+ "timestamp": "2019-07-13 13:46:30.591025", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 61, in application\n    response = frappe.handler.handle()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 21, in handle\n    data = execute_cmd(cmd)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 56, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/__init__.py\", line 1036, in call\n    return fn(*args, **newargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 84, in runserverobj\n    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/desk/form/run_method.py\", line 36, in runserverobj\n    r = doc.run_method(method)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 772, in run_method\n    out = Document.hook(fn)(self, *args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 1048, in composer\n    return composed(self, method, *args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 1031, in runner\n    add_to_return_value(self, fn(self, *args, **kwargs))\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 766, in <lambda>\n    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py\", line 132, in get_emp_and_leave_details\n    self.pull_sal_struct()\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py\", line 182, in pull_sal_struct\n    make_salary_slip(self._salary_structure_doc.name, self)\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_structure/salary_structure.py\", line 160, in make_salary_slip\n    }, target_doc, postprocess, ignore_child_tables=True)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/mapper.py\", line 113, in get_mapped_doc\n    postprocess(source_doc, target_doc)\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_structure/salary_structure.py\", line 150, in postprocess\n    target.run_method('process_salary_structure', for_preview=for_preview)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 772, in run_method\n    out = Document.hook(fn)(self, *args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 1048, in composer\n    return composed(self, method, *args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 1031, in runner\n    add_to_return_value(self, fn(self, *args, **kwargs))\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/document.py\", line 766, in <lambda>\n    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py\", line 821, in process_salary_structure\n    self.calculate_net_pay()\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py\", line 292, in calculate_net_pay\n    self.calculate_component_amounts()\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py\", line 308, in calculate_component_amounts\n    self.add_structure_components()\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py\", line 320, in add_structure_components\n    self.update_component_row(struct_row, amount, key)\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py\", line 431, in update_component_row\n    'depends_on_payment_days' : struct_row.depends_on_payment_days,\nAttributeError: 'SalaryDetail' object has no attribute 'depends_on_payment_days'\n"
+}

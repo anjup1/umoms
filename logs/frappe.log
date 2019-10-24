@@ -1,0 +1,1430 @@
+[ERROR] 2019-10-24 09:54:59,019 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 09:55:59,227 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 09:55:59,232 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 09:56:59,416 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 09:56:59,421 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 09:57:59,624 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 09:57:59,629 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 09:58:59,828 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 09:58:59,833 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:00:00,004 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:00:00,010 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:01:00,203 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:01:00,208 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:02:00,402 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:02:00,408 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:03:00,615 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:03:00,619 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:04:00,829 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:04:00,834 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:05:00,987 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:05:00,990 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:06:01,182 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:06:01,185 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:07:01,546 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:07:01,551 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:08:01,733 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:08:01,738 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:09:01,928 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:09:01,933 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:10:02,113 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:10:02,118 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:11:02,319 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:11:02,324 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:12:02,510 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:12:02,515 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:13:02,694 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:13:02,713 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:14:02,904 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:14:02,909 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:15:03,093 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:15:03,098 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:16:03,279 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:16:03,284 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:17:03,483 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:17:03,489 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:18:03,684 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:18:03,689 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:19:03,892 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:19:03,897 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:20:04,077 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:20:04,082 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:21:04,274 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:21:04,280 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:22:04,481 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:22:04,486 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:23:04,701 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:23:04,706 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:24:04,894 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:24:04,899 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:25:05,089 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:25:05,094 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:26:05,289 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:26:05,294 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:27:05,479 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site1
+Exception in Enqueue Events for Site moms-site1
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+
+[ERROR] 2019-10-24 10:27:05,484 | /home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: moms-site2
+Exception in Enqueue Events for Site moms-site2
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 93, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/umoms/moms-bench/apps/frappe/frappe/utils/scheduler.py", line 237, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 642, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+

@@ -1,0 +1,17 @@
+{
+ "db_name": "ce8f7d83a4ad22b8", 
+ "db_password": "OYOfYTAUpjj77PWu",
+  "developer_mode": 1,
+ "domains": [
+  "erp.manufacturing.com"
+ ], 
+ "encryption_key": "RRPYeNO9jf7RbozuPpCqgrupJnOX1oZGx8wdtyvzegM=", 
+ "limits": {
+  "space_usage": {
+   "backup_size": 18.0, 
+   "database_size": 71.36, 
+   "files_size": 11.0, 
+   "total": 100.36
+  }
+ }
+}

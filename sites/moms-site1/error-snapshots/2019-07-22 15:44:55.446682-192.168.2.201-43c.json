@@ -1,0 +1,198 @@
+{
+ "etype": "IOError", 
+ "evalue": "IOError(\"wkhtmltopdf exited with non-zero code 1. error:\\nThe switch --header-html, is not support using unpatched qt, and will be ignored.The switch --footer-html, is not support using unpatched qt, and will be ignored.The switch --print-media-type, is not support using unpatched qt, and will be ignored.QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-umoms'\\nqt.qpa.screen: QXcbConnection: Could not connect to display \\nCould not connect to any X display.\\n\",)", 
+ "exception": {
+  "args": "('wkhtmltopdf exited with non-zero code 1. error:\\n... to display \\nCould not connect to any X display.\\n',)", 
+  "errno": "None", 
+  "filename": "None", 
+  "message": "'wkhtmltopdf exited with non-zero code 1. error:\\n... to display \\nCould not connect to any X display.\\n'", 
+  "strerror": "None"
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/api/method/frappe.utils.print_format.report_to_pdf' [POST]>)", 
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/umoms/moms-bench/apps/frappe/frappe/api.pyc'>", 
+    "frappe.api. handle": "<function handle>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "response": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "64": "\t\t\tif frappe.local.form_dict.data is None:", 
+    "65": "\t\t\t\t\tfrappe.local.form_dict.data = request.get_data()", 
+    "66": "\t\t\tresponse = frappe.api.handle()", 
+    "67": "", 
+    "68": "\t\telif frappe.request.path.startswith('/backups'):"
+   }, 
+   "lnum": 66
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/umoms/moms-bench/apps/frappe/frappe/handler.pyc'>", 
+    "frappe.handler. handle": "<function handle>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/api.py", 
+   "func": "handle", 
+   "lines": {
+    "54": "\tif call==\"method\":", 
+    "55": "\t\tfrappe.local.form_dict.cmd = doctype", 
+    "56": "\t\treturn frappe.handler.handle()", 
+    "57": "", 
+    "58": "\telif call==\"resource\":"
+   }, 
+   "lnum": 56
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "cmd": "u'frappe.utils.print_format.report_to_pdf'", 
+    "data": "None", 
+    "global execute_cmd": "<function execute_cmd>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "handle", 
+   "lines": {
+    "19": "", 
+    "20": "\tif cmd!='login':", 
+    "21": "\t\tdata = execute_cmd(cmd)", 
+    "22": "", 
+    "23": "\t# data can be an empty string or list which are valid responses"
+   }, 
+   "lnum": 21
+  }, 
+  {
+   "call": "(cmd=u'frappe.utils.print_format.report_to_pdf', from_async=False)", 
+   "dump": {
+    "frappe. call": "<function call>", 
+    "frappe. form_dict": "{'cmd': u'frappe.utils.print_format.report_to_pd...html> ', 'data': '', 'orientation': u'Landscape'}", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "method": "<function report_to_pdf>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "execute_cmd", 
+   "lines": {
+    "54": "\tis_whitelisted(method)", 
+    "55": "", 
+    "56": "\treturn frappe.call(method, **frappe.form_dict)", 
+    "57": "", 
+    "58": ""
+   }, 
+   "lnum": 56
+  }, 
+  {
+   "call": "(fn=<function report_to_pdf>, *args=(), **kwargs={'cmd': u'frappe.utils.print_format.report_to_pdf', 'data': '', 'html': u'<!DOCTYPE html> <html lang=\"en\">   <head>     ...49</p>       </div>    </div>   </body> </html> ', 'orientation': u'Landscape'})", 
+   "dump": {
+    "args": "()", 
+    "fn": "<function report_to_pdf>", 
+    "newargs": "{'html': u'<!DOCTYPE html> <html lang=\"en\">   <head>     ...49</p>       </div>    </div>   </body> </html> ', 'orientation': u'Landscape'}"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", 
+   "func": "call", 
+   "lines": {
+    "1034": "\tnewargs = get_newargs(fn, kwargs)", 
+    "1035": "", 
+    "1036": "\treturn fn(*args, **newargs)", 
+    "1037": "", 
+    "1038": "def get_newargs(fn, kwargs):"
+   }, 
+   "lnum": 1036
+  }, 
+  {
+   "call": "(html=u'<!DOCTYPE html> <html lang=\"en\">   <head>     ...49</p>       </div>    </div>   </body> </html> ', orientation=u'Landscape')", 
+   "dump": {
+    "frappe. local": "<werkzeug.local.Local object>", 
+    "frappe.local. response": "{u'docs': [], u'route': u'message', u'http_statu...40}, 'filename': u'report.pdf', u'type': u'page'}", 
+    "frappe.local.response. filecontent": "None", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "global get_pdf": "<function get_pdf>", 
+    "html": "u'<!DOCTYPE html> <html lang=\"en\">   <head>     ...49</p>       </div>    </div>   </body> </html> '", 
+    "orientation": "u'Landscape'"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/utils/print_format.py", 
+   "func": "report_to_pdf", 
+   "lines": {
+    "96": "def report_to_pdf(html, orientation=\"Landscape\"):", 
+    "97": "\tfrappe.local.response.filename = \"report.pdf\"", 
+    "98": "\tfrappe.local.response.filecontent = get_pdf(html, {\"orientation\": orientation})", 
+    "99": "\tfrappe.local.response.type = \"pdf\"", 
+    "100": ""
+   }, 
+   "lnum": 98
+  }, 
+  {
+   "call": "(html=u'<!DOCTYPE html>\\n<html lang=\"en\">\\n <head>\\n  ...    </p>\\n   </div>\\n  </div>\\n </body>\\n</html>', options={u'background': None, u'cookie': [(u'sid', u'288ee28d3f2c664b5647c2970a4d311ac9ab7d2a65d1d21f3312edea')], u'disable-javascript': u'', u'disable-local-file-access': u'', u'encoding': u'UTF-8', u'footer-html': u'/tmp/frappe-pdf-b1dbc9bd64f413967b03dadf665c4a583fdb5c704e8fcd3517276cb7.html', u'header-html': u'/tmp/frappe-pdf-ae07cb404bdeb79c13a79c459fac1c940cf140e0fe422677d1529d9f.html', u'images': None, u'margin-left': u'15mm', u'margin-right': u'15mm', ...}, output=None)", 
+   "dump": {
+    "fname": "u'/tmp/frappe-pdf-791ca20970b93ec35c36c6f1354c99a6b8f8734458804f2899334ee5.pdf'", 
+    "global pdfkit": "<module 'pdfkit' from '/home/umoms/moms-bench/env/src/pdfkit/pdfkit/__init__.pyc'>", 
+    "html": "u'<!DOCTYPE html>\\n<html lang=\"en\">\\n <head>\\n  ...    </p>\\n   </div>\\n  </div>\\n </body>\\n</html>'", 
+    "options": "{u'background': None, u'cookie': [(u'sid', u'288ee28d3f2c664b5647c2970a4d311ac9ab7d2a65d1d21f3312edea')], u'disable-javascript': u'', u'disable-local-file-access': u'', u'encoding': u'UTF-8', u'footer-html': u'/tmp/frappe-pdf-b1dbc9bd64f413967b03dadf665c4a583fdb5c704e8fcd3517276cb7.html', u'header-html': u'/tmp/frappe-pdf-ae07cb404bdeb79c13a79c459fac1c940cf140e0fe422677d1529d9f.html', u'images': None, u'margin-left': u'15mm', u'margin-right': u'15mm', ...}", 
+    "pdfkit. from_string": "<function from_string>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/utils/pdf.py", 
+   "func": "get_pdf", 
+   "lines": {
+    "21": "", 
+    "22": "\ttry:", 
+    "23": "\t\tpdfkit.from_string(html, fname, options=options or {})", 
+    "24": "\t\tif output:", 
+    "25": "\t\t\tappend_pdf(PdfFileReader(fname),output)"
+   }, 
+   "lnum": 23
+  }, 
+  {
+   "call": "(input=u'<!DOCTYPE html>\\n<html lang=\"en\">\\n <head>\\n  ...    </p>\\n   </div>\\n  </div>\\n </body>\\n</html>', output_path=u'/tmp/frappe-pdf-791ca20970b93ec35c36c6f1354c99a6b8f8734458804f2899334ee5.pdf', options={u'background': None, u'cookie': [(u'sid', u'288ee28d3f2c664b5647c2970a4d311ac9ab7d2a65d1d21f3312edea')], u'disable-javascript': u'', u'disable-local-file-access': u'', u'encoding': u'UTF-8', u'footer-html': u'/tmp/frappe-pdf-b1dbc9bd64f413967b03dadf665c4a583fdb5c704e8fcd3517276cb7.html', u'header-html': u'/tmp/frappe-pdf-ae07cb404bdeb79c13a79c459fac1c940cf140e0fe422677d1529d9f.html', u'images': None, u'margin-left': u'15mm', u'margin-right': u'15mm', ...}, toc=None, cover=None, css=None, configuration=None)", 
+   "dump": {
+    "output_path": "u'/tmp/frappe-pdf-791ca20970b93ec35c36c6f1354c99a6b8f8734458804f2899334ee5.pdf'", 
+    "r": "<pdfkit.pdfkit.PDFKit object>", 
+    "r. to_pdf": "<bound method PDFKit.to_pdf of <pdfkit.pdfkit.PDFKit object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/src/pdfkit/pdfkit/api.py", 
+   "func": "from_string", 
+   "lines": {
+    "66": "               configuration=configuration)", 
+    "67": "", 
+    "68": "    return r.to_pdf(output_path)", 
+    "69": "", 
+    "70": ""
+   }, 
+   "lnum": 68
+  }, 
+  {
+   "call": "(self=<pdfkit.pdfkit.PDFKit object>, path=u'/tmp/frappe-pdf-791ca20970b93ec35c36c6f1354c99a6b8f8734458804f2899334ee5.pdf')", 
+   "dump": {
+    "\"wkhtmltopdf exited with non-zero code {0}. error:\\n{1}\".format": "undefined", 
+    "builtin IOError": "<type 'exceptions.IOError'>", 
+    "exit_code": "1", 
+    "stderr": "'The switch --header-html, is not support using u... to display \\nCould not connect to any X display.\\n'", 
+    "stderr. decode": "<built-in method decode of str object>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/src/pdfkit/pdfkit/pdfkit.py", 
+   "func": "to_pdf", 
+   "lines": {
+    "141": "", 
+    "142": "        if exit_code != 0:", 
+    "143": "            raise IOError(\"wkhtmltopdf exited with non-zero code {0}. error:\\n{1}\".format(exit_code, stderr.decode(\"utf-8\")))", 
+    "144": "", 
+    "145": "        # Since wkhtmltopdf sends its output to stderr we will capture it"
+   }, 
+   "lnum": 143
+  }
+ ], 
+ "locals": {
+  "args": "[u'/usr/bin/wkhtmltopdf', u'--page-size', 'A4', u'--header-html', '/tmp/frappe-pdf-ae07cb404bdeb79c13a79c459fac1c940cf140e0fe422677d1529d9f.html', u'--orientation', 'Landscape', u'--disable-javascript', u'--encoding', 'UTF-8', u'--margin-left', '15mm', u'--background', u'--quiet', u'--cookie', u'sid', u'288ee28d3f2c664b5647c2970a4d311ac9ab7d2a65d1d21f3312edea', u'--disable-local-file-access', u'--footer-html', '/tmp/frappe-pdf-b1dbc9bd64f413967b03dadf665c4a583fdb5c704e8fcd3517276cb7.html', ...]", 
+  "exit_code": "1", 
+  "input": "'<!DOCTYPE html>\\n<html lang=\"en\">\\n <head>\\n  <meta...5:49\\n    </p>\\n   </div>\\n  </div>\\n </body>\\n</html>'", 
+  "path": "u'/tmp/frappe-pdf-791ca20970b93ec35c36c6f1354c99a6b8f8734458804f2899334ee5.pdf'", 
+  "result": "<subprocess.Popen object>", 
+  "self": "<pdfkit.pdfkit.PDFKit object>", 
+  "stderr": "'The switch --header-html, is not support using u... to display \\nCould not connect to any X display.\\n'", 
+  "stdout": "''"
+ }, 
+ "pyver": "Python 2.7.15rc1: /home/umoms/moms-bench/env/bin/python (prefix: /home/umoms/moms-bench/env)", 
+ "timestamp": "2019-07-22 15:44:55.446997", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 66, in application\n    response = frappe.api.handle()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/api.py\", line 56, in handle\n    return frappe.handler.handle()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 21, in handle\n    data = execute_cmd(cmd)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 56, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/__init__.py\", line 1036, in call\n    return fn(*args, **newargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/utils/print_format.py\", line 98, in report_to_pdf\n    frappe.local.response.filecontent = get_pdf(html, {\"orientation\": orientation})\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/utils/pdf.py\", line 23, in get_pdf\n    pdfkit.from_string(html, fname, options=options or {})\n  File \"/home/umoms/moms-bench/env/src/pdfkit/pdfkit/api.py\", line 68, in from_string\n    return r.to_pdf(output_path)\n  File \"/home/umoms/moms-bench/env/src/pdfkit/pdfkit/pdfkit.py\", line 143, in to_pdf\n    raise IOError(\"wkhtmltopdf exited with non-zero code {0}. error:\\n{1}\".format(exit_code, stderr.decode(\"utf-8\")))\nIOError: wkhtmltopdf exited with non-zero code 1. error:\nThe switch --header-html, is not support using unpatched qt, and will be ignored.The switch --footer-html, is not support using unpatched qt, and will be ignored.The switch --print-media-type, is not support using unpatched qt, and will be ignored.QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-umoms'\nqt.qpa.screen: QXcbConnection: Could not connect to display \nCould not connect to any X display.\n\n"
+}

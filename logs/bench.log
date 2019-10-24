@@ -1,0 +1,33 @@
+2019-03-12 13:44:24,200 INFO getting app erpnext
+2019-03-12 13:44:24,217 INFO git clone https://github.com/frappe/erpnext --branch master --depth 1 --origin upstream
+2019-03-12 13:44:46,857 INFO installing erpnext
+2019-03-12 13:44:46,857 INFO ./env/bin/pip install -q  -e ./apps/erpnext 
+2019-07-12 11:55:03,098 INFO updating bench
+2019-07-12 11:55:03,105 INFO git pull
+2019-07-12 11:55:27,694 INFO ./env/bin/pip install Pillow
+2019-07-12 12:05:19,709 INFO updating bench
+2019-07-12 12:05:19,710 INFO git pull
+2019-07-12 12:05:26,843 INFO ./env/bin/pip install Pillow
+2019-07-12 12:07:11,281 INFO updating bench
+2019-07-12 12:07:11,281 INFO git pull
+2019-07-12 12:07:17,794 INFO ./env/bin/pip install Pillow
+2019-07-12 12:08:07,766 INFO updating bench
+2019-07-12 12:08:07,766 INFO git pull
+2019-07-12 12:08:14,568 INFO ./env/bin/pip install Pillow
+2019-07-12 12:08:27,417 INFO pulling frappe
+2019-07-12 12:08:27,418 INFO git fetch --all
+2019-07-12 12:08:29,419 INFO git reset --hard upstream/master
+2019-07-12 12:08:29,469 INFO find . -name "*.pyc" -delete
+2019-07-12 12:08:30,779 INFO pulling erpnext
+2019-07-12 12:08:30,780 INFO git fetch --all
+2019-07-12 12:12:54,960 INFO git reset --hard upstream/master
+2019-07-12 12:12:55,178 INFO find . -name "*.pyc" -delete
+2019-07-12 12:12:55,318 INFO ./env/bin/pip install --upgrade pip
+2019-07-12 12:13:00,185 INFO ./env/bin/pip install -q -r /home/umoms/moms-repo/requirements.txt
+2019-07-12 12:13:05,146 INFO installing frappe
+2019-07-12 12:13:05,147 INFO ./env/bin/pip install -q  -e ./apps/frappe 
+2019-07-12 12:13:09,394 INFO installing erpnext
+2019-07-12 12:13:09,395 INFO ./env/bin/pip install -q  -e ./apps/erpnext 
+2019-07-12 12:13:14,899 INFO yarn install
+2019-07-12 12:15:20,670 INFO bench build
+2019-07-12 12:16:54,179 INFO sudo supervisorctl restart moms-bench-workers: moms-bench-web:

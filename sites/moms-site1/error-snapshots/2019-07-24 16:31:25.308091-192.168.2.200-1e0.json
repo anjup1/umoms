@@ -1,0 +1,339 @@
+{
+ "etype": "ProgrammingError", 
+ "evalue": "ProgrammingError(1146, u\"Table 'ce8f7d83a4ad22b8.tabBidding' doesn't exist\")", 
+ "exception": {
+  "args": "(1146, u\"Table 'ce8f7d83a4ad22b8.tabBidding' doesn't exist\")", 
+  "message": "''"
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/' [POST]>)", 
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/umoms/moms-bench/apps/frappe/frappe/handler.pyc'>", 
+    "frappe.handler. handle": "<function handle>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "response": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:", 
+    "61": "\t\t\tresponse = frappe.handler.handle()", 
+    "62": "", 
+    "63": "\t\telif frappe.request.path.startswith(\"/api/\"):"
+   }, 
+   "lnum": 61
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "cmd": "u'frappe.model.rename_doc.rename_doc'", 
+    "data": "None", 
+    "global execute_cmd": "<function execute_cmd>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "handle", 
+   "lines": {
+    "19": "", 
+    "20": "\tif cmd!='login':", 
+    "21": "\t\tdata = execute_cmd(cmd)", 
+    "22": "", 
+    "23": "\t# data can be an empty string or list which are valid responses"
+   }, 
+   "lnum": 21
+  }, 
+  {
+   "call": "(cmd=u'frappe.model.rename_doc.rename_doc', from_async=False)", 
+   "dump": {
+    "frappe. call": "<function call>", 
+    "frappe. form_dict": "{'new': u'Bidding', 'cmd': u'frappe.model.rename...Quotation', 'doctype': u'DocType', 'merge': u'0'}", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "method": "<function rename_doc>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "execute_cmd", 
+   "lines": {
+    "54": "\tis_whitelisted(method)", 
+    "55": "", 
+    "56": "\treturn frappe.call(method, **frappe.form_dict)", 
+    "57": "", 
+    "58": ""
+   }, 
+   "lnum": 56
+  }, 
+  {
+   "call": "(fn=<function rename_doc>, *args=(), **kwargs={'cmd': u'frappe.model.rename_doc.rename_doc', 'doctype': u'DocType', 'merge': u'0', 'new': u'Bidding', 'old': u'Quotation'})", 
+   "dump": {
+    "args": "()", 
+    "fn": "<function rename_doc>", 
+    "newargs": "{'doctype': u'DocType', 'merge': u'0', 'new': u'Bidding', 'old': u'Quotation'}"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", 
+   "func": "call", 
+   "lines": {
+    "1034": "\tnewargs = get_newargs(fn, kwargs)", 
+    "1035": "", 
+    "1036": "\treturn fn(*args, **newargs)", 
+    "1037": "", 
+    "1038": "def get_newargs(fn, kwargs):"
+   }, 
+   "lnum": 1036
+  }, 
+  {
+   "call": "(doctype=u'DocType', old=u'Quotation', new=u'Bidding', force=0, merge=0, ignore_permissions=False, ignore_if_exists=False)", 
+   "dump": {
+    "doctype": "u'DocType'", 
+    "global rename_dynamic_links": "<function rename_dynamic_links>", 
+    "new": "u'Bidding'", 
+    "old": "u'Quotation'"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/rename_doc.py", 
+   "func": "rename_doc", 
+   "lines": {
+    "47": "\tupdate_link_field_values(link_fields, old, new, doctype)", 
+    "48": "", 
+    "49": "\trename_dynamic_links(doctype, old, new)", 
+    "50": "", 
+    "51": "\t# save the user settings in the db"
+   }, 
+   "lnum": 49
+  }, 
+  {
+   "call": "(doctype=u'DocType', old=u'Quotation', new=u'Bidding')", 
+   "dump": {
+    ").get": "undefined", 
+    "df": "undefined", 
+    "doctype": "u'DocType'", 
+    "global get_dynamic_link_map": "<function get_dynamic_link_map>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/rename_doc.py", 
+   "func": "rename_dynamic_links", 
+   "lines": {
+    "385": "", 
+    "386": "def rename_dynamic_links(doctype, old, new):", 
+    "387": "\tfor df in get_dynamic_link_map().get(doctype, []):", 
+    "388": "\t\t# dynamic link in single, just one value to check", 
+    "389": "\t\tif frappe.get_meta(df.parent).issingle:"
+   }, 
+   "lnum": 387
+  }, 
+  {
+   "call": "(for_delete=False)", 
+   "dump": {
+    "\"\"\"select distinct {options} from `tab{parent}`\"\"\".format": "undefined", 
+    "df": "{u'read_only': 0, u'fieldname': u'party_name', u...parent': u'Bidding', u'options': u'quotation_to'}", 
+    "frappe. db": "<frappe.database.Database instance>", 
+    "frappe.db. sql_list": "<bound method Database.sql_list of <frappe.database.Database instance>>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "links": "[None, u'', u'Customer']"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/dynamic_links.py", 
+   "func": "get_dynamic_link_map", 
+   "lines": {
+    "43": "\t\t\t\tdynamic_link_map.setdefault(meta.name, []).append(df)", 
+    "44": "\t\t\telse:", 
+    "45": "\t\t\t\tlinks = frappe.db.sql_list(\"\"\"select distinct {options} from `tab{parent}`\"\"\".format(**df))", 
+    "46": "\t\t\t\tfor doctype in links:", 
+    "47": "\t\t\t\t\tdynamic_link_map.setdefault(doctype, []).append(df)"
+   }, 
+   "lnum": 45
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, query=u'select distinct quotation_to from `tabBidding`', values=(), debug=False)", 
+   "dump": {
+    "debug": "False", 
+    "query": "u'select distinct quotation_to from `tabBidding`'", 
+    "r": "undefined", 
+    "self": "<frappe.database.Database instance>", 
+    "self. sql": "<bound method Database.sql of <frappe.database.Database instance>>", 
+    "values": "()"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "sql_list", 
+   "lines": {
+    "275": "\t\t\tdoctypes = frappe.db.sql_list(\"select name from DocType\")", 
+    "276": "\t\t\"\"\"", 
+    "277": "\t\treturn [r[0] for r in self.sql(query, values, debug=debug)]", 
+    "278": "", 
+    "279": "\tdef sql_ddl(self, query, values=(), debug=False):"
+   }, 
+   "lnum": 277
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, query=u'select distinct quotation_to from `tabBidding`', values=(), as_dict=0, as_list=0, formatted=0, debug=False, ignore_ddl=0, as_utf8=0, auto_commit=0, update=None, explain=False)", 
+   "dump": {
+    "query": "u'select distinct quotation_to from `tabBidding`'", 
+    "self": "<frappe.database.Database instance>", 
+    "self. _cursor": "<pymysql.cursors.Cursor object>", 
+    "self._cursor. execute": "<bound method Cursor.execute of <pymysql.cursors.Cursor object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "sql", 
+   "lines": {
+    "212": "\t\t\t\t\tfrappe.log(\">>>>\")", 
+    "213": "", 
+    "214": "\t\t\t\tself._cursor.execute(query)", 
+    "215": "", 
+    "216": "\t\t\t\tif frappe.flags.in_migrate:"
+   }, 
+   "lnum": 214
+  }, 
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, query='select distinct quotation_to from `tabBidding`', args=None)", 
+   "dump": {
+    "query": "'select distinct quotation_to from `tabBidding`'", 
+    "result": "undefined", 
+    "self": "<pymysql.cursors.Cursor object>", 
+    "self. _query": "<bound method Cursor._query of <pymysql.cursors.Cursor object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", 
+   "func": "execute", 
+   "lines": {
+    "168": "        query = self.mogrify(query, args)", 
+    "169": "", 
+    "170": "        result = self._query(query)", 
+    "171": "        self._executed = query", 
+    "172": "        return result"
+   }, 
+   "lnum": 170
+  }, 
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, q='select distinct quotation_to from `tabBidding`')", 
+   "dump": {
+    "conn": "<pymysql.connections.Connection object>", 
+    "conn. query": "<bound method Connection.query of <pymysql.connections.Connection object>>", 
+    "q": "'select distinct quotation_to from `tabBidding`'"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", 
+   "func": "_query", 
+   "lines": {
+    "326": "        self._last_executed = q", 
+    "327": "        self._clear_result()", 
+    "328": "        conn.query(q)", 
+    "329": "        self._do_get_result()", 
+    "330": "        return self.rowcount"
+   }, 
+   "lnum": 328
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, sql='select distinct quotation_to from `tabBidding`', unbuffered=False)", 
+   "dump": {
+    "self": "<pymysql.connections.Connection object>", 
+    "self. _affected_rows": "0", 
+    "self. _read_query_result": "<bound method Connection._read_query_result of <pymysql.connections.Connection object>>", 
+    "unbuffered": "False"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "query", 
+   "lines": {
+    "515": "                sql = sql.encode(self.encoding, 'surrogateescape')", 
+    "516": "        self._execute_command(COMMAND.COM_QUERY, sql)", 
+    "517": "        self._affected_rows = self._read_query_result(unbuffered=unbuffered)", 
+    "518": "        return self._affected_rows", 
+    "519": ""
+   }, 
+   "lnum": 517
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, unbuffered=False)", 
+   "dump": {
+    "result": "<pymysql.connections.MySQLResult object>", 
+    "result. read": "<bound method MySQLResult.read of <pymysql.connections.MySQLResult object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_read_query_result", 
+   "lines": {
+    "730": "        else:", 
+    "731": "            result = MySQLResult(self)", 
+    "732": "            result.read()", 
+    "733": "        self._result = result", 
+    "734": "        if result.server_status is not None:"
+   }, 
+   "lnum": 732
+  }, 
+  {
+   "call": "(self=<pymysql.connections.MySQLResult object>)", 
+   "dump": {
+    "first_packet": "undefined", 
+    "self": "<pymysql.connections.MySQLResult object>", 
+    "self. connection": "None", 
+    "self.connection._read_packet": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "read", 
+   "lines": {
+    "1073": "    def read(self):", 
+    "1074": "        try:", 
+    "1075": "            first_packet = self.connection._read_packet()", 
+    "1076": "", 
+    "1077": "            if first_packet.is_ok_packet():"
+   }, 
+   "lnum": 1075
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, packet_type=<class 'pymysql.protocol.MysqlPacket'>)", 
+   "dump": {
+    "packet": "<pymysql.protocol.MysqlPacket object>", 
+    "packet. check_error": "<bound method MysqlPacket.check_error of <pymysql.protocol.MysqlPacket object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_read_packet", 
+   "lines": {
+    "682": "", 
+    "683": "        packet = packet_type(buff, self.encoding)", 
+    "684": "        packet.check_error()", 
+    "685": "        return packet", 
+    "686": ""
+   }, 
+   "lnum": 684
+  }, 
+  {
+   "call": "(self=<pymysql.protocol.MysqlPacket object>)", 
+   "dump": {
+    "err. raise_mysql_exception": "<function raise_mysql_exception>", 
+    "global err": "<module 'pymysql.err' from '/home/umoms/moms-ben...cal/lib/python2.7/site-packages/pymysql/err.pyc'>", 
+    "self": "<pymysql.protocol.MysqlPacket object>", 
+    "self. _data": "\"\\xffz\\x04#42S02Table 'ce8f7d83a4ad22b8.tabBidding' doesn't exist\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", 
+   "func": "check_error", 
+   "lines": {
+    "218": "            errno = self.read_uint16()", 
+    "219": "            if DEBUG: print(\"errno =\", errno)", 
+    "220": "            err.raise_mysql_exception(self._data)", 
+    "221": "", 
+    "222": "    def dump(self):"
+   }, 
+   "lnum": 220
+  }, 
+  {
+   "call": "(data=\"\\xffz\\x04#42S02Table 'ce8f7d83a4ad22b8.tabBidding' doesn't exist\")", 
+   "dump": {
+    "errno": "1146", 
+    "errorclass": "<class 'pymysql.err.ProgrammingError'>", 
+    "errval": "u\"Table 'ce8f7d83a4ad22b8.tabBidding' doesn't exist\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", 
+   "func": "raise_mysql_exception", 
+   "lines": {
+    "105": "        errval = data[9:].decode('utf-8', 'replace')", 
+    "106": "    else:", 
+    "107": "        errval = data[3:].decode('utf-8', 'replace')", 
+    "108": "    errorclass = error_map.get(errno, InternalError)", 
+    "109": "    raise errorclass(errno, errval)"
+   }, 
+   "lnum": 109
+  }
+ ], 
+ "locals": {
+  "data": "\"\\xffz\\x04#42S02Table 'ce8f7d83a4ad22b8.tabBidding' doesn't exist\"", 
+  "errno": "1146", 
+  "errorclass": "<class 'pymysql.err.ProgrammingError'>", 
+  "errval": "u\"Table 'ce8f7d83a4ad22b8.tabBidding' doesn't exist\"", 
+  "is_41": "True"
+ }, 
+ "pyver": "Python 2.7.15rc1: /home/umoms/moms-bench/env/bin/python (prefix: /home/umoms/moms-bench/env)", 
+ "timestamp": "2019-07-24 16:31:25.308297", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 61, in application\n    response = frappe.handler.handle()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 21, in handle\n    data = execute_cmd(cmd)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 56, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/__init__.py\", line 1036, in call\n    return fn(*args, **newargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/rename_doc.py\", line 49, in rename_doc\n    rename_dynamic_links(doctype, old, new)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/rename_doc.py\", line 387, in rename_dynamic_links\n    for df in get_dynamic_link_map().get(doctype, []):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/dynamic_links.py\", line 45, in get_dynamic_link_map\n    links = frappe.db.sql_list(\"\"\"select distinct {options} from `tab{parent}`\"\"\".format(**df))\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 277, in sql_list\n    return [r[0] for r in self.sql(query, values, debug=debug)]\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 214, in sql\n    self._cursor.execute(query)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py\", line 170, in execute\n    result = self._query(query)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py\", line 328, in _query\n    conn.query(q)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 517, in query\n    self._affected_rows = self._read_query_result(unbuffered=unbuffered)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 732, in _read_query_result\n    result.read()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 1075, in read\n    first_packet = self.connection._read_packet()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 684, in _read_packet\n    packet.check_error()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py\", line 220, in check_error\n    err.raise_mysql_exception(self._data)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py\", line 109, in raise_mysql_exception\n    raise errorclass(errno, errval)\nProgrammingError: (1146, u\"Table 'ce8f7d83a4ad22b8.tabBidding' doesn't exist\")\n"
+}

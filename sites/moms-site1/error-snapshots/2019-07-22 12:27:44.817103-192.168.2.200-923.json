@@ -1,0 +1,347 @@
+{
+ "etype": "InternalError", 
+ "evalue": "InternalError(1054, u\"Unknown column 'start' in 'field list'\")", 
+ "exception": {
+  "args": "(1054, u\"Unknown column 'start' in 'field list'\")", 
+  "message": "''"
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/?doctype=....desk.calendar.get_events&_=1563778674532' [GET]>)", 
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/umoms/moms-bench/apps/frappe/frappe/handler.pyc'>", 
+    "frappe.handler. handle": "<function handle>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "response": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:", 
+    "61": "\t\t\tresponse = frappe.handler.handle()", 
+    "62": "", 
+    "63": "\t\telif frappe.request.path.startswith(\"/api/\"):"
+   }, 
+   "lnum": 61
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "cmd": "u'frappe.desk.calendar.get_events'", 
+    "data": "None", 
+    "global execute_cmd": "<function execute_cmd>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "handle", 
+   "lines": {
+    "19": "", 
+    "20": "\tif cmd!='login':", 
+    "21": "\t\tdata = execute_cmd(cmd)", 
+    "22": "", 
+    "23": "\t# data can be an empty string or list which are valid responses"
+   }, 
+   "lnum": 21
+  }, 
+  {
+   "call": "(cmd=u'frappe.desk.calendar.get_events', from_async=False)", 
+   "dump": {
+    "frappe. call": "<function call>", 
+    "frappe. form_dict": "{'start': u'2019-06-30 00:00:00', 'end': u'2019-...pe.desk.calendar.get_events', 'doctype': u'Lead'}", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "method": "<function get_events>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "execute_cmd", 
+   "lines": {
+    "54": "\tis_whitelisted(method)", 
+    "55": "", 
+    "56": "\treturn frappe.call(method, **frappe.form_dict)", 
+    "57": "", 
+    "58": ""
+   }, 
+   "lnum": 56
+  }, 
+  {
+   "call": "(fn=<function get_events>, *args=(), **kwargs={'cmd': u'frappe.desk.calendar.get_events', 'doctype': u'Lead', 'end': u'2019-08-11 00:00:00', 'field_map': u'{\"id\":\"name\",\"start\":\"start\",\"end\":\"end\",\"allDay\":\"all_day\"}', 'filters': u'[]', 'start': u'2019-06-30 00:00:00'})", 
+   "dump": {
+    "args": "()", 
+    "fn": "<function get_events>", 
+    "newargs": "{'doctype': u'Lead', 'end': u'2019-08-11 00:00:00', 'field_map': u'{\"id\":\"name\",\"start\":\"start\",\"end\":\"end\",\"allDay\":\"all_day\"}', 'filters': u'[]', 'start': u'2019-06-30 00:00:00'}"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", 
+   "func": "call", 
+   "lines": {
+    "1034": "\tnewargs = get_newargs(fn, kwargs)", 
+    "1035": "", 
+    "1036": "\treturn fn(*args, **newargs)", 
+    "1037": "", 
+    "1038": "def get_newargs(fn, kwargs):"
+   }, 
+   "lnum": 1036
+  }, 
+  {
+   "call": "(doctype=u'Lead', start=u'2019-06-30 00:00:00', end=u'2019-08-11 00:00:00', field_map={u'start': u'start', u'allDay': u'all_day', u'end': u'end', u'id': u'name'}, filters=[[u'Lead', u\"ifnull(start, '0000-00-00 00:00:00')\", u'<=', u'2019-08-11 00:00:00'], [u'Lead', u\"ifnull(end, '2199-12-31 00:00:00')\", u'>=', u'2019-06-30 00:00:00']], fields=[u'start', u'end', None, u'name'])", 
+   "dump": {
+    "doctype": "u'Lead'", 
+    "fields": "[u'start', u'end', None, u'name']", 
+    "filters": "[[u'Lead', u\"ifnull(start, '0000-00-00 00:00:00')\", u'<=', u'2019-08-11 00:00:00'], [u'Lead', u\"ifnull(end, '2199-12-31 00:00:00')\", u'>=', u'2019-06-30 00:00:00']]", 
+    "frappe. get_list": "<function get_list>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/desk/calendar.py", 
+   "func": "get_events", 
+   "lines": {
+    "53": "\t\t[doctype, start_date, '<=', end],", 
+    "54": "\t\t[doctype, end_date, '>=', start],", 
+    "55": "\t]", 
+    "56": "", 
+    "57": "\treturn frappe.get_list(doctype, fields=fields, filters=filters)"
+   }, 
+   "lnum": 57
+  }, 
+  {
+   "call": "(doctype=u'Lead', *args=(), **kwargs={'fields': [u'start', u'end', None, u'name'], 'filters': [[u'Lead', u\"ifnull(start, '0000-00-00 00:00:00')\", u'<=', u'2019-08-11 00:00:00'], [u'Lead', u\"ifnull(end, '2199-12-31 00:00:00')\", u'>=', u'2019-06-30 00:00:00']]})", 
+   "dump": {
+    ").execute": "undefined", 
+    "args": "()", 
+    "builtin None": "None", 
+    "doctype": "u'Lead'", 
+    "frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "frappe. model": "<module 'frappe.model' from '/home/umoms/moms-bench/apps/frappe/frappe/model/__init__.pyc'>", 
+    "frappe.model. db_query": "<module 'frappe.model.db_query' from '/home/umoms/moms-bench/apps/frappe/frappe/model/db_query.pyc'>", 
+    "frappe.model.db_query. DatabaseQuery": "<class 'frappe.model.db_query.DatabaseQuery'>", 
+    "kwargs": "{'fields': [u'start', u'end', None, u'name'], 'filters': [[u'Lead', u\"ifnull(start, '0000-00-00 00:00:00')\", u'<=', u'2019-08-11 00:00:00'], [u'Lead', u\"ifnull(end, '2199-12-31 00:00:00')\", u'>=', u'2019-06-30 00:00:00']]}"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", 
+   "func": "get_list", 
+   "lines": {
+    "1262": "\t\"\"\"", 
+    "1263": "\timport frappe.model.db_query", 
+    "1264": "\treturn frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)", 
+    "1265": "", 
+    "1266": "def get_all(doctype, *args, **kwargs):"
+   }, 
+   "lnum": 1264
+  }, 
+  {
+   "call": "(self=<frappe.model.db_query.DatabaseQuery object>, query=None, fields=[u'start', u'end', None, u'name'], filters=[[u'Lead', u\"ifnull(start, '0000-00-00 00:00:00')\", u'<=', u'2019-08-11 00:00:00'], [u'Lead', u\"ifnull(end, '2199-12-31 00:00:00')\", u'>=', u'2019-06-30 00:00:00']], or_filters=None, docstatus=None, group_by=None, order_by=None, limit_start=False, limit_page_length=None, as_list=False, with_childnames=False, debug=False, ignore_permissions=False, user=None, with_comment_count=False, join=u'left join', distinct=False, start=None, page_length=None, limit=None, ignore_ifnull=False, save_user_settings=False, save_user_settings_fields=False, update=None, add_total_row=None, user_settings=None, reference_doctype=None)", 
+   "dump": {
+    "result": "undefined", 
+    "self": "<frappe.model.db_query.DatabaseQuery object>", 
+    "self. build_and_run": "<bound method DatabaseQuery.build_and_run of <frappe.model.db_query.DatabaseQuery object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/db_query.py", 
+   "func": "execute", 
+   "lines": {
+    "91": "\t\t\tresult = self.run_custom_query(query)", 
+    "92": "\t\telse:", 
+    "93": "\t\t\tresult = self.build_and_run()", 
+    "94": "", 
+    "95": "\t\tif with_comment_count and not as_list and self.doctype:"
+   }, 
+   "lnum": 93
+  }, 
+  {
+   "call": "(self=<frappe.model.db_query.DatabaseQuery object>)", 
+   "dump": {
+    "as_dict": "undefined", 
+    "debug": "undefined", 
+    "frappe. db": "<frappe.database.Database instance>", 
+    "frappe.db. sql": "<bound method Database.sql of <frappe.database.Database instance>>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "query": "u'select start, end, name from `tabLead` where i...)))\\n\\t\\t\\t  order by `tabLead`.`modified` DESC '", 
+    "self": "<frappe.model.db_query.DatabaseQuery object>", 
+    "self. as_list": "False", 
+    "self. debug": "False", 
+    "self. update": "None", 
+    "update": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/model/db_query.py", 
+   "func": "build_and_run", 
+   "lines": {
+    "115": "\t\t\t%(group_by)s %(order_by)s %(limit)s\"\"\" % args", 
+    "116": "", 
+    "117": "\t\treturn frappe.db.sql(query, as_dict=not self.as_list, debug=self.debug, update=self.update)", 
+    "118": "", 
+    "119": "\tdef prepare_args(self):"
+   }, 
+   "lnum": 117
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, query=u'select start, end, name from `tabLead` where i...)))\\n\\t\\t\\t  order by `tabLead`.`modified` DESC ', values=(), as_dict=True, as_list=0, formatted=0, debug=False, ignore_ddl=0, as_utf8=0, auto_commit=0, update=None, explain=False)", 
+   "dump": {
+    "query": "u'select start, end, name from `tabLead` where i...)))\\n\\t\\t\\t  order by `tabLead`.`modified` DESC '", 
+    "self": "<frappe.database.Database instance>", 
+    "self. _cursor": "<pymysql.cursors.Cursor object>", 
+    "self._cursor. execute": "<bound method Cursor.execute of <pymysql.cursors.Cursor object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "sql", 
+   "lines": {
+    "212": "\t\t\t\t\tfrappe.log(\">>>>\")", 
+    "213": "", 
+    "214": "\t\t\t\tself._cursor.execute(query)", 
+    "215": "", 
+    "216": "\t\t\t\tif frappe.flags.in_migrate:"
+   }, 
+   "lnum": 214
+  }, 
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, query='select start, end, name from `tabLead` where ifn...TD\")))))\\n\\t\\t\\t  order by `tabLead`.`modified` DESC ', args=None)", 
+   "dump": {
+    "query": "'select start, end, name from `tabLead` where ifn...TD\")))))\\n\\t\\t\\t  order by `tabLead`.`modified` DESC '", 
+    "result": "undefined", 
+    "self": "<pymysql.cursors.Cursor object>", 
+    "self. _query": "<bound method Cursor._query of <pymysql.cursors.Cursor object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", 
+   "func": "execute", 
+   "lines": {
+    "168": "        query = self.mogrify(query, args)", 
+    "169": "", 
+    "170": "        result = self._query(query)", 
+    "171": "        self._executed = query", 
+    "172": "        return result"
+   }, 
+   "lnum": 170
+  }, 
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, q='select start, end, name from `tabLead` where ifn...TD\")))))\\n\\t\\t\\t  order by `tabLead`.`modified` DESC ')", 
+   "dump": {
+    "conn": "<pymysql.connections.Connection object>", 
+    "conn. query": "<bound method Connection.query of <pymysql.connections.Connection object>>", 
+    "q": "'select start, end, name from `tabLead` where ifn...TD\")))))\\n\\t\\t\\t  order by `tabLead`.`modified` DESC '"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", 
+   "func": "_query", 
+   "lines": {
+    "326": "        self._last_executed = q", 
+    "327": "        self._clear_result()", 
+    "328": "        conn.query(q)", 
+    "329": "        self._do_get_result()", 
+    "330": "        return self.rowcount"
+   }, 
+   "lnum": 328
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, sql='select start, end, name from `tabLead` where ifn...TD\")))))\\n\\t\\t\\t  order by `tabLead`.`modified` DESC ', unbuffered=False)", 
+   "dump": {
+    "self": "<pymysql.connections.Connection object>", 
+    "self. _affected_rows": "1", 
+    "self. _read_query_result": "<bound method Connection._read_query_result of <pymysql.connections.Connection object>>", 
+    "unbuffered": "False"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "query", 
+   "lines": {
+    "515": "                sql = sql.encode(self.encoding, 'surrogateescape')", 
+    "516": "        self._execute_command(COMMAND.COM_QUERY, sql)", 
+    "517": "        self._affected_rows = self._read_query_result(unbuffered=unbuffered)", 
+    "518": "        return self._affected_rows", 
+    "519": ""
+   }, 
+   "lnum": 517
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, unbuffered=False)", 
+   "dump": {
+    "result": "<pymysql.connections.MySQLResult object>", 
+    "result. read": "<bound method MySQLResult.read of <pymysql.connections.MySQLResult object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_read_query_result", 
+   "lines": {
+    "730": "        else:", 
+    "731": "            result = MySQLResult(self)", 
+    "732": "            result.read()", 
+    "733": "        self._result = result", 
+    "734": "        if result.server_status is not None:"
+   }, 
+   "lnum": 732
+  }, 
+  {
+   "call": "(self=<pymysql.connections.MySQLResult object>)", 
+   "dump": {
+    "first_packet": "undefined", 
+    "self": "<pymysql.connections.MySQLResult object>", 
+    "self. connection": "None", 
+    "self.connection._read_packet": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "read", 
+   "lines": {
+    "1073": "    def read(self):", 
+    "1074": "        try:", 
+    "1075": "            first_packet = self.connection._read_packet()", 
+    "1076": "", 
+    "1077": "            if first_packet.is_ok_packet():"
+   }, 
+   "lnum": 1075
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, packet_type=<class 'pymysql.protocol.MysqlPacket'>)", 
+   "dump": {
+    "packet": "<pymysql.protocol.MysqlPacket object>", 
+    "packet. check_error": "<bound method MysqlPacket.check_error of <pymysql.protocol.MysqlPacket object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_read_packet", 
+   "lines": {
+    "682": "", 
+    "683": "        packet = packet_type(buff, self.encoding)", 
+    "684": "        packet.check_error()", 
+    "685": "        return packet", 
+    "686": ""
+   }, 
+   "lnum": 684
+  }, 
+  {
+   "call": "(self=<pymysql.protocol.MysqlPacket object>)", 
+   "dump": {
+    "err. raise_mysql_exception": "<function raise_mysql_exception>", 
+    "global err": "<module 'pymysql.err' from '/home/umoms/moms-ben...cal/lib/python2.7/site-packages/pymysql/err.pyc'>", 
+    "self": "<pymysql.protocol.MysqlPacket object>", 
+    "self. _data": "\"\\xff\\x1e\\x04#42S22Unknown column 'start' in 'field list'\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", 
+   "func": "check_error", 
+   "lines": {
+    "218": "            errno = self.read_uint16()", 
+    "219": "            if DEBUG: print(\"errno =\", errno)", 
+    "220": "            err.raise_mysql_exception(self._data)", 
+    "221": "", 
+    "222": "    def dump(self):"
+   }, 
+   "lnum": 220
+  }, 
+  {
+   "call": "(data=\"\\xff\\x1e\\x04#42S22Unknown column 'start' in 'field list'\")", 
+   "dump": {
+    "errno": "1054", 
+    "errorclass": "<class 'pymysql.err.InternalError'>", 
+    "errval": "u\"Unknown column 'start' in 'field list'\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", 
+   "func": "raise_mysql_exception", 
+   "lines": {
+    "105": "        errval = data[9:].decode('utf-8', 'replace')", 
+    "106": "    else:", 
+    "107": "        errval = data[3:].decode('utf-8', 'replace')", 
+    "108": "    errorclass = error_map.get(errno, InternalError)", 
+    "109": "    raise errorclass(errno, errval)"
+   }, 
+   "lnum": 109
+  }
+ ], 
+ "locals": {
+  "data": "\"\\xff\\x1e\\x04#42S22Unknown column 'start' in 'field list'\"", 
+  "errno": "1054", 
+  "errorclass": "<class 'pymysql.err.InternalError'>", 
+  "errval": "u\"Unknown column 'start' in 'field list'\"", 
+  "is_41": "True"
+ }, 
+ "pyver": "Python 2.7.15rc1: /home/umoms/moms-bench/env/bin/python (prefix: /home/umoms/moms-bench/env)", 
+ "timestamp": "2019-07-22 12:27:44.817272", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 61, in application\n    response = frappe.handler.handle()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 21, in handle\n    data = execute_cmd(cmd)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 56, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/__init__.py\", line 1036, in call\n    return fn(*args, **newargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/desk/calendar.py\", line 57, in get_events\n    return frappe.get_list(doctype, fields=fields, filters=filters)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/__init__.py\", line 1264, in get_list\n    return frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/db_query.py\", line 93, in execute\n    result = self.build_and_run()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/model/db_query.py\", line 117, in build_and_run\n    return frappe.db.sql(query, as_dict=not self.as_list, debug=self.debug, update=self.update)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 214, in sql\n    self._cursor.execute(query)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py\", line 170, in execute\n    result = self._query(query)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py\", line 328, in _query\n    conn.query(q)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 517, in query\n    self._affected_rows = self._read_query_result(unbuffered=unbuffered)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 732, in _read_query_result\n    result.read()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 1075, in read\n    first_packet = self.connection._read_packet()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 684, in _read_packet\n    packet.check_error()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py\", line 220, in check_error\n    err.raise_mysql_exception(self._data)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py\", line 109, in raise_mysql_exception\n    raise errorclass(errno, errval)\nInternalError: (1054, u\"Unknown column 'start' in 'field list'\")\n"
+}

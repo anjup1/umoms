@@ -1,0 +1,753 @@
+make_records: in DEBUG mode
+make_records: in DEBUG mode
+make_records: in DEBUG mode
+make_records: in DEBUG mode
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 737, in validate_fields
+    check_search_fields(meta, fields)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 614, in check_search_fields
+    frappe.throw(_("Search field {0} is not valid").format(fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+ValidationError: Search field Title is not valid
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py"Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 739, in validate_fields
+    check_timeline_field(meta)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 665, in check_timeline_field
+    frappe.throw(_("Timeline field must be a valid fieldname"), InvalidFieldNameError)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+InvalidFieldNameError: Timeline field must be a valid fieldname
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 739, in validate_fields
+    check_timeline_field(meta)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 665, in check_timeline_field
+    frappe.throw(_("Timeline field must be a valid fieldname"), InvalidFieldNameError)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+InvalidFieldNameError: Timeline field must be a valid fieldname
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 721, in validate_fields
+    check_illegal_characters(d.fieldname)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 489, in check_illegal_characters
+    validate_column_name(fieldname)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/db_schema.py", line 597, in validate_column_name
+    frappe.throw(_("Fieldname {0} cannot have special characters like {1}").format(frappe.bold(cstr(n)), special_characters), InvalidColumnName)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+InvalidColumnName: Fieldname <b>cust name</b> cannot have special characters like " "
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, , line 737, in validate_fields
+    check_search_fields(meta, fields)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 614, in check_search_fields
+    frappe.throw(_("Search field {0} is not valid").format(fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+ValidationError: Search field Title is not valid
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 721, in validate_fields
+    check_illegal_characters(d.fieldname)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 489, in check_illegal_characters
+    validate_column_name(fieldname)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/db_schema.py", line 597, in validate_column_name
+    frappe.throw(_("Fieldname {0} cannot have special characters like {1}").format(frappe.bold(cstr(n)), special_characters), InvalidColumnName)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+InvalidColumnName: Fieldname <b>cust name</b> cannot have special characters like " "
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  Filin insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 721, in validate_fields
+    check_illegal_characters(d.fieldname)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 489, in check_illegal_characters
+    validate_column_name(fieldname)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/db_schema.py", line 597, in validate_column_name
+    frappe.throw(_("Fieldname {0} cannot have special characters like {1}").format(frappe.bold(cstr(n)), special_characters), InvalidColumnName)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+InvalidColumnName: Fieldname <b>cust name</b> cannot have special characters like " "
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 737, in validate_fields
+    check_search_fields(meta, fields)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 614, in check_search_fields
+    frappe.throw(_("Search field {0} is not valid").format(fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+ValidationError: Search field Cust_NTraceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 737, in validate_fields
+    check_search_fields(meta, fields)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 614, in check_search_fields
+    frappe.throw(_("Search field {0} is not valid").format(fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+ValidationError: Search field Cust Name is not valid
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctypeame is not valid
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 737, in validate_fields
+    check_search_fields(meta, fields)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 614, in check_search_fields
+    frappe.throw(_("Search field {0} is not valid").format(fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+ValidationError: Search field Cust_Name is not valid
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/docty.py", line 737, in validate_fields
+    check_search_fields(meta, fields)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 614, in check_search_fields
+    frappe.throw(_("Search field {0} is not valid").format(fieldname))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+ValidationError: Search field Cust Name is not valid
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 71, in validate
+    validate_fields(self)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 739, in validate_fields
+    check_timeline_field(meta)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/core/doctype/doctype/doctype.py", line 669, in check_timeline_field
+    frappe.throw(_("Timeline field must be a Link or Dynamic Link"), InvalidFieldNameError)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+InvalidFieldNameError: Timeline field must be a Link or Dynamic Link
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in rTraceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/rename_doc.py", line 49, in rename_doc
+    rename_dynamic_links(doctype, old, new)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/rename_doc.py", line 387, in rename_dynamic_links
+    for df in get_dynamic_link_map().get(doctype, []):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/dynamic_links.py", line 45, in get_dynamic_link_map
+    links = frappe.db.sql_list("""select distinct {options} from `tab{parent}`""".format(**df))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 277, in sql_list
+    return [r[0] for r in self.sql(query, values, debug=debug)]
+  File "/home/umoms/moms-bench/apps/frappe/frappe/database.py", line 214, in sql
+    self._cursor.execute(query)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+ProgrammingError: (1146, u"Table 'ce8f7d83a4ad22b8.tabBidding' doesn't exist")
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 49, in load_assets
+    self.add_code()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 105, in add_code
+    self.add_html_templates(path)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 117, in add_html_templates
+    for fname in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/umoms/moms-bench/apps/erpnext/erpnext/sTraceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 49, in load_assets
+    self.add_code()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 105, in add_code
+    self.add_html_templates(path)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 117, in add_html_templates
+    for fname in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/umoms/moms-bench/apps/erpnext/erpnext/selling/doctype/quotation'
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/search.py", line 53, in search_link
+    search_widget(doctype, txt, query, searchfield=searchfield, page_length=page_length, filters=filters, reference_doctype=reference_doctype, ignore_user_permissions=ignore_user_permissions)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/search.py", line 155, in search_widget
+    as_list=not as_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1264, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/db_query.py", line 42, in execute
+    raise frappe.PermissionError(self.doctype)
+PermissionError: UOM
+
+elling/doctype/quotation'
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 49, in load_assets
+    self.add_code()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 105, in add_code
+    self.add_html_templates(path)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/meta.py", line 117, in add_html_templates
+    for fname in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/umoms/moms-bench/apps/erpnext/erpnext/selling/doctype/quotation'
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/search.py", line 53, in search_link
+    search_widget(doctype, txt, query, searchfield=searchfield, page_length=page_length, filters=filters, reference_doctype=reference_doctype, ignore_user_permissions=ignore_user_permissions)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/search.py", line 155, in search_widget
+    as_list=not as_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1264, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/db_query.py", line 42, in execute
+    raise frappe.PermissionError(self.doctype)
+PermissionError: UOM
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/search.py", line 53, in search_link
+    search_widget(doctype, txt, query, searchfield=searchfield, page_length=page_length, filters=filters, reference_doctype=reference_doctype, ignore_user_permissions=ignore_user_permissions)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/search.py", line 155, in search_widget
+    as_list=not as_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1264, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/db_query.py", line 42, in execute
+    raise frappe.PermissionError(self.doctype)
+PermissionError: UOM
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/search.py", line 53, in search_link
+    search_widget(doctype, txt, query, searchfield=searchfield, page_length=page_length, filters=filters, reference_doctype=reference_doctype, ignore_user_permissions=ignore_user_permissions)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/search.py", line 155, in search_widget
+    as_list=not as_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1264, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/db_query.py", line 42, in execute
+    raise frappe.PermissionError(self.doctype)
+PermissionError: UOM
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/attendance_request/attendance_request.py", line 17, in validate
+    validate_dates(self, self.from_date, self.to_date)
+  File "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/utils.py", line 155, in validate_dates
+    frappe.throw(_("To date can not be less than from date"))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 360, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red')
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 346, in msgprint
+    _raise_exception()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 315, in _raise_exception
+    raise raise_exception(msg)
+ValidationError: To date can not be less than from date
+
+Traceback (most recent call last):
+  File "/home/umoms/moms-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", line 1036, in call
+    return fn(*args, **newargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 260, in save
+    return self._save(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 283, in _save
+    self.insert()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 222, in insert
+    self.run_before_save_methods()
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 876, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/umoms/moms-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/doctype/attendance_request/attendance_request.py", line 17, in validate
+    validate_dates(self, self.from_date, self.to_date)
+  File "/home/umoms/moms-bench/apps/erpnext/erpnext/hr/utils.py", line 155, in validate_dates
+    frappe.throw(_("To date can not be less than from date"))

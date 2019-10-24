@@ -1,0 +1,397 @@
+{
+ "etype": "OperationalError", 
+ "evalue": "OperationalError(1045, u\"Access denied for user 'ce8f7d83a4ad22b8'@'localhost' (using password: YES)\")", 
+ "exception": {
+  "args": "(1045, u\"Access denied for user 'ce8f7d83a4ad22b8'@'localhost' (using password: YES)\")", 
+  "message": "''"
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/?doctype=...desk.form.load.getdoctype&_=1563943410789' [GET]>)", 
+   "dump": {
+    "global init_request": "<function init_request>", 
+    "request": "<Request 'http://erp.manufacturing.com/?doctype=...desk.form.load.getdoctype&_=1563943410789' [GET]>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "56": "\t\trollback = True", 
+    "57": "", 
+    "58": "\t\tinit_request(request)", 
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:"
+   }, 
+   "lnum": 58
+  }, 
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/?doctype=...desk.form.load.getdoctype&_=1563943410789' [GET]>)", 
+   "dump": {
+    "frappe. auth": "<module 'frappe.auth' from '/home/umoms/moms-bench/apps/frappe/frappe/auth.pyc'>", 
+    "frappe. local": "<werkzeug.local.Local object>", 
+    "frappe.auth. HTTPRequest": "<class frappe.auth.HTTPRequest>", 
+    "frappe.local.http_request": "undefined", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "init_request", 
+   "lines": {
+    "118": "\tmake_form_dict(request)", 
+    "119": "", 
+    "120": "\tfrappe.local.http_request = frappe.auth.HTTPRequest()", 
+    "121": "", 
+    "122": "def make_form_dict(request):"
+   }, 
+   "lnum": 120
+  }, 
+  {
+   "call": "(self=<frappe.auth.HTTPRequest instance>)", 
+   "dump": {
+    "frappe. local": "<werkzeug.local.Local object>", 
+    "frappe.local.login_manager": "undefined", 
+    "global LoginManager": "<class frappe.auth.LoginManager>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/auth.py", 
+   "func": "__init__", 
+   "lines": {
+    "49": "", 
+    "50": "\t\t# login", 
+    "51": "\t\tfrappe.local.login_manager = LoginManager()", 
+    "52": "", 
+    "53": "\t\tif frappe.form_dict._lang:"
+   }, 
+   "lnum": 51
+  }, 
+  {
+   "call": "(self=<frappe.auth.LoginManager instance>)", 
+   "dump": {
+    "builtin True": "True", 
+    "resume": "undefined", 
+    "self": "<frappe.auth.LoginManager instance>", 
+    "self. make_session": "<bound method LoginManager.make_session of <frappe.auth.LoginManager instance>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/auth.py", 
+   "func": "__init__", 
+   "lines": {
+    "111": "\t\t\ttry:", 
+    "112": "\t\t\t\tself.resume = True", 
+    "113": "\t\t\t\tself.make_session(resume=True)", 
+    "114": "\t\t\t\tself.get_user_info()", 
+    "115": "\t\t\t\tself.set_user_info(resume=True)"
+   }, 
+   "lnum": 113
+  }, 
+  {
+   "call": "(self=<frappe.auth.LoginManager instance>, resume=True)", 
+   "dump": {
+    "self": "<frappe.auth.LoginManager instance>", 
+    "self. clear_active_sessions": "<bound method LoginManager.clear_active_sessions of <frappe.auth.LoginManager instance>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/auth.py", 
+   "func": "make_session", 
+   "lines": {
+    "185": "\t\tself.user = frappe.local.session_obj.user", 
+    "186": "\t\tfrappe.local.session = frappe.local.session_obj.data", 
+    "187": "\t\tself.clear_active_sessions()", 
+    "188": "", 
+    "189": "\tdef clear_active_sessions(self):"
+   }, 
+   "lnum": 187
+  }, 
+  {
+   "call": "(self=<frappe.auth.LoginManager instance>)", 
+   "dump": {
+    "builtin True": "True", 
+    "frappe. session": "{u'data': {u'session_expiry': u'01:00:00', u'ses...defe834f95929dccccadca48f34771c7d64709529de8b28'}", 
+    "frappe.session. user": "u'vijila_cp@ringlus.in'", 
+    "global clear_sessions": "<function clear_sessions>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "keep_current": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/auth.py", 
+   "func": "clear_active_sessions", 
+   "lines": {
+    "193": "", 
+    "194": "\t\tif frappe.session.user != \"Guest\":", 
+    "195": "\t\t\tclear_sessions(frappe.session.user, keep_current=True)", 
+    "196": "", 
+    "197": "\tdef authenticate(self, user=None, pwd=None):"
+   }, 
+   "lnum": 195
+  }, 
+  {
+   "call": "(user=u'vijila_cp@ringlus.in', keep_current=True, device=None, force=False)", 
+   "dump": {
+    "device": "None", 
+    "global get_sessions_to_clear": "<function get_sessions_to_clear>", 
+    "keep_current": "True", 
+    "sid": "undefined", 
+    "user": "u'vijila_cp@ringlus.in'"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/sessions.py", 
+   "func": "clear_sessions", 
+   "lines": {
+    "42": "\t\treason = \"Force Logged out by the user\"", 
+    "43": "", 
+    "44": "\tfor sid in get_sessions_to_clear(user, keep_current, device):", 
+    "45": "\t\tdelete_session(sid, reason=reason)", 
+    "46": ""
+   }, 
+   "lnum": 44
+  }, 
+  {
+   "call": "(user=u'vijila_cp@ringlus.in', keep_current=True, device=u'desktop')", 
+   "dump": {
+    "frappe. db": "<frappe.database.Database instance>", 
+    "frappe.db. get_value": "<bound method Database.get_value of <frappe.database.Database instance>>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "simultaneous_sessions": "undefined", 
+    "user": "u'vijila_cp@ringlus.in'"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/sessions.py", 
+   "func": "get_sessions_to_clear", 
+   "lines": {
+    "60": "\tlimit = 0", 
+    "61": "\tif user == frappe.session.user:", 
+    "62": "\t\tsimultaneous_sessions = frappe.db.get_value('User', user, 'simultaneous_sessions') or 1", 
+    "63": "\t\tlimit = simultaneous_sessions - 1", 
+    "64": ""
+   }, 
+   "lnum": 62
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, doctype=u'User', filters=u'vijila_cp@ringlus.in', fieldname=u'simultaneous_sessions', ignore=None, as_dict=False, debug=False, order_by=None, cache=False)", 
+   "dump": {
+    "cache": "False", 
+    "order_by": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "get_value", 
+   "lines": {
+    "489": "", 
+    "490": "\t\tret = self.get_values(doctype, filters, fieldname, ignore, as_dict, debug,", 
+    "491": "\t\t\torder_by, cache=cache)", 
+    "492": "", 
+    "493": "\t\treturn ((len(ret[0]) > 1 or as_dict) and ret[0] or ret[0][0]) if ret else None"
+   }, 
+   "lnum": 491
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, doctype=u'User', filters=u'vijila_cp@ringlus.in', fieldname=u'simultaneous_sessions', ignore=None, as_dict=False, debug=False, order_by=u'modified desc', update=None, cache=False)", 
+   "dump": {
+    "as_dict": "False", 
+    "debug": "False", 
+    "doctype": "u'User'", 
+    "fields": "[u'simultaneous_sessions']", 
+    "filters": "u'vijila_cp@ringlus.in'", 
+    "order_by": "u'modified desc'", 
+    "out": "None", 
+    "self": "<frappe.database.Database instance>", 
+    "self. _get_values_from_table": "<bound method Database._get_values_from_table of <frappe.database.Database instance>>", 
+    "update": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "get_values", 
+   "lines": {
+    "533": "\t\t\tif (filters is not None) and (filters!=doctype or doctype==\"DocType\"):", 
+    "534": "\t\t\t\ttry:", 
+    "535": "\t\t\t\t\tout = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)", 
+    "536": "\t\t\t\texcept Exception as e:", 
+    "537": "\t\t\t\t\tif ignore and e.args[0] in (1146, 1054):"
+   }, 
+   "lnum": 535
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, fields=[u'simultaneous_sessions'], filters=u'vijila_cp@ringlus.in', doctype=u'User', as_dict=False, debug=False, order_by=u'order by modified desc', update=None)", 
+   "dump": {
+    "as_dict": "False", 
+    "debug": "False", 
+    "update": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "_get_values_from_table", 
+   "lines": {
+    "675": "\t\tr = self.sql(\"select {0} from `tab{1}` {2} {3} {4}\"", 
+    "676": "\t\t\t.format(fl, doctype, \"where\" if conditions else \"\", conditions, order_by), values,", 
+    "677": "\t\t\tas_dict=as_dict, debug=debug, update=update)", 
+    "678": "", 
+    "679": "\t\treturn r"
+   }, 
+   "lnum": 677
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, query=u'select `simultaneous_sessions` from `tabUser` where `name` = %(name)s order by modified desc', values={u'name': u'vijila_cp@ringlus.in'}, as_dict=False, as_list=0, formatted=0, debug=False, ignore_ddl=0, as_utf8=0, auto_commit=0, update=None, explain=False)", 
+   "dump": {
+    "self": "<frappe.database.Database instance>", 
+    "self. connect": "<bound method Database.connect of <frappe.database.Database instance>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "sql", 
+   "lines": {
+    "163": "\t\t\"\"\"", 
+    "164": "\t\tif not self._conn:", 
+    "165": "\t\t\tself.connect()", 
+    "166": "", 
+    "167": "\t\t# in transaction validations"
+   }, 
+   "lnum": 165
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>)", 
+   "dump": {
+    "builtin True": "True", 
+    "charset": "undefined", 
+    "conv": "undefined", 
+    "global conversions": "{0: <class 'decimal.Decimal'>, 1: <type 'int'>, 2: <type 'int'>, 3: <type 'int'>, 4: <type 'float'>, 5: <type 'float'>, 7: <function convert_mysql_timestamp>, 8: <type 'int'>, 9: <type 'int'>, 10: <function convert_date>, ...}", 
+    "local_infile": "undefined", 
+    "self": "<frappe.database.Database instance>", 
+    "self. local_infile": "None", 
+    "use_unicode": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "connect", 
+   "lines": {
+    "113": "\t\telse:", 
+    "114": "\t\t\tself._conn = pymysql.connect(self.host, self.user or '', self.password or '',", 
+    "115": "\t\t\t\tcharset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)", 
+    "116": "", 
+    "117": "\t\t# MYSQL_OPTION_MULTI_STATEMENTS_OFF = 1"
+   }, 
+   "lnum": 115
+  }, 
+  {
+   "call": "(*args=(u'localhost', u'ce8f7d83a4ad22b8', u'OYOfYTAUpjj77PWu'), **kwargs={'charset': u'utf8mb4', 'conv': {0: <class 'decimal.Decimal'>, 1: <type 'int'>, 2: <type 'int'>, 3: <type 'int'>, 4: <type 'float'>, 5: <type 'float'>, 7: <function convert_mysql_timestamp>, 8: <type 'int'>, 9: <type 'int'>, 10: <function convert_date>, ...}, 'local_infile': None, 'use_unicode': True})", 
+   "dump": {
+    "Connection": "<class 'pymysql.connections.Connection'>", 
+    "args": "(u'localhost', u'ce8f7d83a4ad22b8', u'OYOfYTAUpjj77PWu')", 
+    "kwargs": "{'charset': u'utf8mb4', 'conv': {0: <class 'decimal.Decimal'>, 1: <type 'int'>, 2: <type 'int'>, 3: <type 'int'>, 4: <type 'float'>, 5: <type 'float'>, 7: <function convert_mysql_timestamp>, 8: <type 'int'>, 9: <type 'int'>, 10: <function convert_date>, ...}, 'local_infile': None, 'use_unicode': True}"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", 
+   "func": "Connect", 
+   "lines": {
+    "92": "    \"\"\"", 
+    "93": "    from .connections import Connection", 
+    "94": "    return Connection(*args, **kwargs)", 
+    "95": "", 
+    "96": "from . import connections as _orig_conn"
+   }, 
+   "lnum": 94
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, host=u'localhost', user=u'ce8f7d83a4ad22b8', password=u'OYOfYTAUpjj77PWu', database=None, port=0, unix_socket=None, charset=u'utf8mb4', sql_mode=None, read_default_file=None, conv={0: <class 'decimal.Decimal'>, 1: <type 'int'>, 2: <type 'int'>, 3: <type 'int'>, 4: <type 'float'>, 5: <type 'float'>, 7: <function convert_mysql_timestamp>, 8: <type 'int'>, 9: <type 'int'>, 10: <function convert_date>, ...}, use_unicode=True, client_flag=3842565, cursorclass=<class 'pymysql.cursors.Cursor'>, init_command=None, connect_timeout=10, ssl=None, read_default_group=None, compress=None, named_pipe=None, autocommit=False, db=None, passwd=None, local_infile=None, max_allowed_packet=16777216, defer_connect=False, auth_plugin_map=None, read_timeout=None, write_timeout=None, bind_address=None, binary_prefix=False, program_name=None, server_public_key=None)", 
+   "dump": {
+    "self": "<pymysql.connections.Connection object>", 
+    "self. connect": "<bound method Connection.connect of <pymysql.connections.Connection object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "__init__", 
+   "lines": {
+    "323": "            self._sock = None", 
+    "324": "        else:", 
+    "325": "            self.connect()", 
+    "326": "", 
+    "327": "    def _create_ssl_ctx(self, sslp):"
+   }, 
+   "lnum": 325
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, sock=<socket._socketobject object>)", 
+   "dump": {
+    "self": "<pymysql.connections.Connection object>", 
+    "self. _request_authentication": "<bound method Connection._request_authentication of <pymysql.connections.Connection object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "connect", 
+   "lines": {
+    "597": "", 
+    "598": "            self._get_server_information()", 
+    "599": "            self._request_authentication()", 
+    "600": "", 
+    "601": "            if self.sql_mode is not None:"
+   }, 
+   "lnum": 599
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>)", 
+   "dump": {
+    "auth_packet": "undefined", 
+    "self": "<pymysql.connections.Connection object>", 
+    "self. _read_packet": "<bound method Connection._read_packet of <pymysql.connections.Connection object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_request_authentication", 
+   "lines": {
+    "859": "", 
+    "860": "        self.write_packet(data)", 
+    "861": "        auth_packet = self._read_packet()", 
+    "862": "", 
+    "863": "        # if authentication method isn't accepted the first byte"
+   }, 
+   "lnum": 861
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, packet_type=<class 'pymysql.protocol.MysqlPacket'>)", 
+   "dump": {
+    "packet": "<pymysql.protocol.MysqlPacket object>", 
+    "packet. check_error": "<bound method MysqlPacket.check_error of <pymysql.protocol.MysqlPacket object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_read_packet", 
+   "lines": {
+    "682": "", 
+    "683": "        packet = packet_type(buff, self.encoding)", 
+    "684": "        packet.check_error()", 
+    "685": "        return packet", 
+    "686": ""
+   }, 
+   "lnum": 684
+  }, 
+  {
+   "call": "(self=<pymysql.protocol.MysqlPacket object>)", 
+   "dump": {
+    "err. raise_mysql_exception": "<function raise_mysql_exception>", 
+    "global err": "<module 'pymysql.err' from '/home/umoms/moms-ben...cal/lib/python2.7/site-packages/pymysql/err.pyc'>", 
+    "self": "<pymysql.protocol.MysqlPacket object>", 
+    "self. _data": "\"\\xff\\x15\\x04#28000Access denied for user 'ce8f7d83a4ad22b8'@'localhost' (using password: YES)\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", 
+   "func": "check_error", 
+   "lines": {
+    "218": "            errno = self.read_uint16()", 
+    "219": "            if DEBUG: print(\"errno =\", errno)", 
+    "220": "            err.raise_mysql_exception(self._data)", 
+    "221": "", 
+    "222": "    def dump(self):"
+   }, 
+   "lnum": 220
+  }, 
+  {
+   "call": "(data=\"\\xff\\x15\\x04#28000Access denied for user 'ce8f7d83a4ad22b8'@'localhost' (using password: YES)\")", 
+   "dump": {
+    "errno": "1045", 
+    "errorclass": "<class 'pymysql.err.OperationalError'>", 
+    "errval": "u\"Access denied for user 'ce8f7d83a4ad22b8'@'localhost' (using password: YES)\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", 
+   "func": "raise_mysql_exception", 
+   "lines": {
+    "105": "        errval = data[9:].decode('utf-8', 'replace')", 
+    "106": "    else:", 
+    "107": "        errval = data[3:].decode('utf-8', 'replace')", 
+    "108": "    errorclass = error_map.get(errno, InternalError)", 
+    "109": "    raise errorclass(errno, errval)"
+   }, 
+   "lnum": 109
+  }
+ ], 
+ "locals": {
+  "data": "\"\\xff\\x15\\x04#28000Access denied for user 'ce8f7d83a4ad22b8'@'localhost' (using password: YES)\"", 
+  "errno": "1045", 
+  "errorclass": "<class 'pymysql.err.OperationalError'>", 
+  "errval": "u\"Access denied for user 'ce8f7d83a4ad22b8'@'localhost' (using password: YES)\"", 
+  "is_41": "True"
+ }, 
+ "pyver": "Python 2.7.15rc1: /home/umoms/moms-bench/env/bin/python (prefix: /home/umoms/moms-bench/env)", 
+ "timestamp": "2019-07-24 10:55:43.233939", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 58, in application\n    init_request(request)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 120, in init_request\n    frappe.local.http_request = frappe.auth.HTTPRequest()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/auth.py\", line 51, in __init__\n    frappe.local.login_manager = LoginManager()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/auth.py\", line 113, in __init__\n    self.make_session(resume=True)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/auth.py\", line 187, in make_session\n    self.clear_active_sessions()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/auth.py\", line 195, in clear_active_sessions\n    clear_sessions(frappe.session.user, keep_current=True)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/sessions.py\", line 44, in clear_sessions\n    for sid in get_sessions_to_clear(user, keep_current, device):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/sessions.py\", line 62, in get_sessions_to_clear\n    simultaneous_sessions = frappe.db.get_value('User', user, 'simultaneous_sessions') or 1\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 491, in get_value\n    order_by, cache=cache)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 535, in get_values\n    out = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 677, in _get_values_from_table\n    as_dict=as_dict, debug=debug, update=update)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 165, in sql\n    self.connect()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 115, in connect\n    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py\", line 94, in Connect\n    return Connection(*args, **kwargs)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 325, in __init__\n    self.connect()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 599, in connect\n    self._request_authentication()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 861, in _request_authentication\n    auth_packet = self._read_packet()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 684, in _read_packet\n    packet.check_error()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py\", line 220, in check_error\n    err.raise_mysql_exception(self._data)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py\", line 109, in raise_mysql_exception\n    raise errorclass(errno, errval)\nOperationalError: (1045, u\"Access denied for user 'ce8f7d83a4ad22b8'@'localhost' (using password: YES)\")\n"
+}

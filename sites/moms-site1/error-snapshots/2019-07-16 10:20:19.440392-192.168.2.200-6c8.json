@@ -1,0 +1,374 @@
+{
+ "etype": "InternalError", 
+ "evalue": "InternalError(1054, u\"Unknown column 'price_not_uom_dependent' in 'field list'\")", 
+ "exception": {
+  "args": "(1054, u\"Unknown column 'price_not_uom_dependent' in 'field list'\")", 
+  "message": "''"
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/' [POST]>)", 
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/umoms/moms-bench/apps/frappe/frappe/handler.pyc'>", 
+    "frappe.handler. handle": "<function handle>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "response": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:", 
+    "61": "\t\t\tresponse = frappe.handler.handle()", 
+    "62": "", 
+    "63": "\t\telif frappe.request.path.startswith(\"/api/\"):"
+   }, 
+   "lnum": 61
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "cmd": "u'erpnext.stock.get_item_details.apply_price_list'", 
+    "data": "None", 
+    "global execute_cmd": "<function execute_cmd>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "handle", 
+   "lines": {
+    "19": "", 
+    "20": "\tif cmd!='login':", 
+    "21": "\t\tdata = execute_cmd(cmd)", 
+    "22": "", 
+    "23": "\t# data can be an empty string or list which are valid responses"
+   }, 
+   "lnum": 21
+  }, 
+  {
+   "call": "(cmd=u'erpnext.stock.get_item_details.apply_price_list', from_async=False)", 
+   "dump": {
+    "frappe. call": "<function call>", 
+    "frappe. form_dict": "{'cmd': u'erpnext.stock.get_item_details.apply_p...is_return\":0,\"update_stock\":0,\"pos_profile\":\"\"}'}", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "method": "<function apply_price_list>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/handler.py", 
+   "func": "execute_cmd", 
+   "lines": {
+    "54": "\tis_whitelisted(method)", 
+    "55": "", 
+    "56": "\treturn frappe.call(method, **frappe.form_dict)", 
+    "57": "", 
+    "58": ""
+   }, 
+   "lnum": 56
+  }, 
+  {
+   "call": "(fn=<function apply_price_list>, *args=(), **kwargs={'args': u'{\"items\":[],\"customer_group\":\"All Customer Gro...\"is_return\":0,\"update_stock\":0,\"pos_profile\":\"\"}', 'cmd': u'erpnext.stock.get_item_details.apply_price_list'})", 
+   "dump": {
+    "args": "()", 
+    "fn": "<function apply_price_list>", 
+    "newargs": "{'args': u'{\"items\":[],\"customer_group\":\"All Customer Gro...\"is_return\":0,\"update_stock\":0,\"pos_profile\":\"\"}'}"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/__init__.py", 
+   "func": "call", 
+   "lines": {
+    "1034": "\tnewargs = get_newargs(fn, kwargs)", 
+    "1035": "", 
+    "1036": "\treturn fn(*args, **newargs)", 
+    "1037": "", 
+    "1038": "def get_newargs(fn, kwargs):"
+   }, 
+   "lnum": 1036
+  }, 
+  {
+   "call": "(args={u'territory': u'All Territories', u'name': u'Ne...u'Ringlus Electro Controls & Automation PVT LTD'}, as_doc=False)", 
+   "dump": {
+    "args": "{u'territory': u'All Territories', u'name': u'Ne...u'Ringlus Electro Controls & Automation PVT LTD'}", 
+    "global get_price_list_currency_and_exchange_rate": "<function get_price_list_currency_and_exchange_rate>", 
+    "parent": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/stock/get_item_details.py", 
+   "func": "apply_price_list", 
+   "lines": {
+    "783": "\targs = process_args(args)", 
+    "784": "", 
+    "785": "\tparent = get_price_list_currency_and_exchange_rate(args)", 
+    "786": "\tchildren = []", 
+    "787": ""
+   }, 
+   "lnum": 785
+  }, 
+  {
+   "call": "(args={u'territory': u'All Territories', u'name': u'Ne...u'Ringlus Electro Controls & Automation PVT LTD'})", 
+   "dump": {
+    "args": "{u'territory': u'All Territories', u'name': u'Ne...u'Ringlus Electro Controls & Automation PVT LTD'}", 
+    "args. price_list": "u'Standard Selling'", 
+    "global get_price_list_uom_dependant": "<function get_price_list_uom_dependant>", 
+    "price_list_uom_dependant": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/stock/get_item_details.py", 
+   "func": "get_price_list_currency_and_exchange_rate", 
+   "lines": {
+    "853": "", 
+    "854": "\tprice_list_currency = get_price_list_currency(args.price_list)", 
+    "855": "\tprice_list_uom_dependant = get_price_list_uom_dependant(args.price_list)", 
+    "856": "\tplc_conversion_rate = args.plc_conversion_rate", 
+    "857": "\tcompany_currency = get_company_currency(args.company)"
+   }, 
+   "lnum": 855
+  }, 
+  {
+   "call": "(price_list=u'Standard Selling')", 
+   "dump": {
+    "as_dict": "undefined", 
+    "builtin True": "True"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/erpnext/erpnext/stock/get_item_details.py", 
+   "func": "get_price_list_uom_dependant", 
+   "lines": {
+    "835": "\tif price_list:", 
+    "836": "\t\tresult = frappe.db.get_value(\"Price List\", {\"name\": price_list,", 
+    "837": "\t\t\t\"enabled\": 1}, [\"name\", \"price_not_uom_dependent\"], as_dict=True)", 
+    "838": "", 
+    "839": "\t\tif not result:"
+   }, 
+   "lnum": 837
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, doctype=u'Price List', filters={u'enabled': 1, u'name': u'Standard Selling'}, fieldname=[u'name', u'price_not_uom_dependent'], ignore=None, as_dict=True, debug=False, order_by=None, cache=False)", 
+   "dump": {
+    "cache": "False", 
+    "order_by": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "get_value", 
+   "lines": {
+    "489": "", 
+    "490": "\t\tret = self.get_values(doctype, filters, fieldname, ignore, as_dict, debug,", 
+    "491": "\t\t\torder_by, cache=cache)", 
+    "492": "", 
+    "493": "\t\treturn ((len(ret[0]) > 1 or as_dict) and ret[0] or ret[0][0]) if ret else None"
+   }, 
+   "lnum": 491
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, doctype=u'Price List', filters={u'enabled': 1, u'name': u'Standard Selling'}, fieldname=[u'name', u'price_not_uom_dependent'], ignore=None, as_dict=True, debug=False, order_by=u'modified desc', update=None, cache=False)", 
+   "dump": {
+    "as_dict": "True", 
+    "debug": "False", 
+    "doctype": "u'Price List'", 
+    "fields": "[u'name', u'price_not_uom_dependent']", 
+    "filters": "{u'enabled': 1, u'name': u'Standard Selling'}", 
+    "order_by": "u'modified desc'", 
+    "out": "None", 
+    "self": "<frappe.database.Database instance>", 
+    "self. _get_values_from_table": "<bound method Database._get_values_from_table of <frappe.database.Database instance>>", 
+    "update": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "get_values", 
+   "lines": {
+    "533": "\t\t\tif (filters is not None) and (filters!=doctype or doctype==\"DocType\"):", 
+    "534": "\t\t\t\ttry:", 
+    "535": "\t\t\t\t\tout = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)", 
+    "536": "\t\t\t\texcept Exception as e:", 
+    "537": "\t\t\t\t\tif ignore and e.args[0] in (1146, 1054):"
+   }, 
+   "lnum": 535
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, fields=[u'name', u'price_not_uom_dependent'], filters={u'enabled': 1, u'name': u'Standard Selling'}, doctype=u'Price List', as_dict=True, debug=False, order_by=u'order by modified desc', update=None)", 
+   "dump": {
+    "as_dict": "True", 
+    "debug": "False", 
+    "update": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "_get_values_from_table", 
+   "lines": {
+    "675": "\t\tr = self.sql(\"select {0} from `tab{1}` {2} {3} {4}\"", 
+    "676": "\t\t\t.format(fl, doctype, \"where\" if conditions else \"\", conditions, order_by), values,", 
+    "677": "\t\t\tas_dict=as_dict, debug=debug, update=update)", 
+    "678": "", 
+    "679": "\t\treturn r"
+   }, 
+   "lnum": 677
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, query=u'select `name`, `price_not_uom_dependent` from ...d)s and `name` = %(name)s order by modified desc', values={u'enabled': 1, u'name': u'Standard Selling'}, as_dict=True, as_list=0, formatted=0, debug=False, ignore_ddl=0, as_utf8=0, auto_commit=0, update=None, explain=False)", 
+   "dump": {
+    "query": "u'select `name`, `price_not_uom_dependent` from ...d)s and `name` = %(name)s order by modified desc'", 
+    "self": "<frappe.database.Database instance>", 
+    "self. _cursor": "<pymysql.cursors.Cursor object>", 
+    "self._cursor. execute": "<bound method Cursor.execute of <pymysql.cursors.Cursor object>>", 
+    "values": "{u'enabled': 1, u'name': u'Standard Selling'}"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "sql", 
+   "lines": {
+    "197": "\t\t\t\t\tfrappe.log(values)", 
+    "198": "\t\t\t\t\tfrappe.log(\">>>>\")", 
+    "199": "\t\t\t\tself._cursor.execute(query, values)", 
+    "200": "", 
+    "201": "\t\t\t\tif frappe.flags.in_migrate:"
+   }, 
+   "lnum": 199
+  }, 
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, query=\"select `name`, `price_not_uom_dependent` from `t...name` = 'Standard Selling' order by modified desc\", args={u'enabled': 1, u'name': u'Standard Selling'})", 
+   "dump": {
+    "query": "\"select `name`, `price_not_uom_dependent` from `t...name` = 'Standard Selling' order by modified desc\"", 
+    "result": "undefined", 
+    "self": "<pymysql.cursors.Cursor object>", 
+    "self. _query": "<bound method Cursor._query of <pymysql.cursors.Cursor object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", 
+   "func": "execute", 
+   "lines": {
+    "168": "        query = self.mogrify(query, args)", 
+    "169": "", 
+    "170": "        result = self._query(query)", 
+    "171": "        self._executed = query", 
+    "172": "        return result"
+   }, 
+   "lnum": 170
+  }, 
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, q=\"select `name`, `price_not_uom_dependent` from `t...name` = 'Standard Selling' order by modified desc\")", 
+   "dump": {
+    "conn": "<pymysql.connections.Connection object>", 
+    "conn. query": "<bound method Connection.query of <pymysql.connections.Connection object>>", 
+    "q": "\"select `name`, `price_not_uom_dependent` from `t...name` = 'Standard Selling' order by modified desc\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", 
+   "func": "_query", 
+   "lines": {
+    "326": "        self._last_executed = q", 
+    "327": "        self._clear_result()", 
+    "328": "        conn.query(q)", 
+    "329": "        self._do_get_result()", 
+    "330": "        return self.rowcount"
+   }, 
+   "lnum": 328
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, sql=\"select `name`, `price_not_uom_dependent` from `t...name` = 'Standard Selling' order by modified desc\", unbuffered=False)", 
+   "dump": {
+    "self": "<pymysql.connections.Connection object>", 
+    "self. _affected_rows": "1", 
+    "self. _read_query_result": "<bound method Connection._read_query_result of <pymysql.connections.Connection object>>", 
+    "unbuffered": "False"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "query", 
+   "lines": {
+    "515": "                sql = sql.encode(self.encoding, 'surrogateescape')", 
+    "516": "        self._execute_command(COMMAND.COM_QUERY, sql)", 
+    "517": "        self._affected_rows = self._read_query_result(unbuffered=unbuffered)", 
+    "518": "        return self._affected_rows", 
+    "519": ""
+   }, 
+   "lnum": 517
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, unbuffered=False)", 
+   "dump": {
+    "result": "<pymysql.connections.MySQLResult object>", 
+    "result. read": "<bound method MySQLResult.read of <pymysql.connections.MySQLResult object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_read_query_result", 
+   "lines": {
+    "730": "        else:", 
+    "731": "            result = MySQLResult(self)", 
+    "732": "            result.read()", 
+    "733": "        self._result = result", 
+    "734": "        if result.server_status is not None:"
+   }, 
+   "lnum": 732
+  }, 
+  {
+   "call": "(self=<pymysql.connections.MySQLResult object>)", 
+   "dump": {
+    "first_packet": "undefined", 
+    "self": "<pymysql.connections.MySQLResult object>", 
+    "self. connection": "None", 
+    "self.connection._read_packet": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "read", 
+   "lines": {
+    "1073": "    def read(self):", 
+    "1074": "        try:", 
+    "1075": "            first_packet = self.connection._read_packet()", 
+    "1076": "", 
+    "1077": "            if first_packet.is_ok_packet():"
+   }, 
+   "lnum": 1075
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, packet_type=<class 'pymysql.protocol.MysqlPacket'>)", 
+   "dump": {
+    "packet": "<pymysql.protocol.MysqlPacket object>", 
+    "packet. check_error": "<bound method MysqlPacket.check_error of <pymysql.protocol.MysqlPacket object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_read_packet", 
+   "lines": {
+    "682": "", 
+    "683": "        packet = packet_type(buff, self.encoding)", 
+    "684": "        packet.check_error()", 
+    "685": "        return packet", 
+    "686": ""
+   }, 
+   "lnum": 684
+  }, 
+  {
+   "call": "(self=<pymysql.protocol.MysqlPacket object>)", 
+   "dump": {
+    "err. raise_mysql_exception": "<function raise_mysql_exception>", 
+    "global err": "<module 'pymysql.err' from '/home/umoms/moms-ben...cal/lib/python2.7/site-packages/pymysql/err.pyc'>", 
+    "self": "<pymysql.protocol.MysqlPacket object>", 
+    "self. _data": "\"\\xff\\x1e\\x04#42S22Unknown column 'price_not_uom_dependent' in 'field list'\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", 
+   "func": "check_error", 
+   "lines": {
+    "218": "            errno = self.read_uint16()", 
+    "219": "            if DEBUG: print(\"errno =\", errno)", 
+    "220": "            err.raise_mysql_exception(self._data)", 
+    "221": "", 
+    "222": "    def dump(self):"
+   }, 
+   "lnum": 220
+  }, 
+  {
+   "call": "(data=\"\\xff\\x1e\\x04#42S22Unknown column 'price_not_uom_dependent' in 'field list'\")", 
+   "dump": {
+    "errno": "1054", 
+    "errorclass": "<class 'pymysql.err.InternalError'>", 
+    "errval": "u\"Unknown column 'price_not_uom_dependent' in 'field list'\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", 
+   "func": "raise_mysql_exception", 
+   "lines": {
+    "105": "        errval = data[9:].decode('utf-8', 'replace')", 
+    "106": "    else:", 
+    "107": "        errval = data[3:].decode('utf-8', 'replace')", 
+    "108": "    errorclass = error_map.get(errno, InternalError)", 
+    "109": "    raise errorclass(errno, errval)"
+   }, 
+   "lnum": 109
+  }
+ ], 
+ "locals": {
+  "data": "\"\\xff\\x1e\\x04#42S22Unknown column 'price_not_uom_dependent' in 'field list'\"", 
+  "errno": "1054", 
+  "errorclass": "<class 'pymysql.err.InternalError'>", 
+  "errval": "u\"Unknown column 'price_not_uom_dependent' in 'field list'\"", 
+  "is_41": "True"
+ }, 
+ "pyver": "Python 2.7.15rc1: /home/umoms/moms-bench/env/bin/python (prefix: /home/umoms/moms-bench/env)", 
+ "timestamp": "2019-07-16 10:20:19.440741", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 61, in application\n    response = frappe.handler.handle()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 21, in handle\n    data = execute_cmd(cmd)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/handler.py\", line 56, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/__init__.py\", line 1036, in call\n    return fn(*args, **newargs)\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/stock/get_item_details.py\", line 785, in apply_price_list\n    parent = get_price_list_currency_and_exchange_rate(args)\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/stock/get_item_details.py\", line 855, in get_price_list_currency_and_exchange_rate\n    price_list_uom_dependant = get_price_list_uom_dependant(args.price_list)\n  File \"/home/umoms/moms-bench/apps/erpnext/erpnext/stock/get_item_details.py\", line 837, in get_price_list_uom_dependant\n    \"enabled\": 1}, [\"name\", \"price_not_uom_dependent\"], as_dict=True)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 491, in get_value\n    order_by, cache=cache)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 535, in get_values\n    out = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 677, in _get_values_from_table\n    as_dict=as_dict, debug=debug, update=update)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 199, in sql\n    self._cursor.execute(query, values)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py\", line 170, in execute\n    result = self._query(query)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py\", line 328, in _query\n    conn.query(q)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 517, in query\n    self._affected_rows = self._read_query_result(unbuffered=unbuffered)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 732, in _read_query_result\n    result.read()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 1075, in read\n    first_packet = self.connection._read_packet()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 684, in _read_packet\n    packet.check_error()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py\", line 220, in check_error\n    err.raise_mysql_exception(self._data)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py\", line 109, in raise_mysql_exception\n    raise errorclass(errno, errval)\nInternalError: (1054, u\"Unknown column 'price_not_uom_dependent' in 'field list'\")\n"
+}

@@ -1,0 +1,401 @@
+{
+ "etype": "ProgrammingError", 
+ "evalue": "ProgrammingError(1146, u\"Table 'ce8f7d83a4ad22b8.tabSingles' doesn't exist\")", 
+ "exception": {
+  "args": "(1146, u\"Table 'ce8f7d83a4ad22b8.tabSingles' doesn't exist\")", 
+  "message": "''"
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/favicon.ico' [GET]>)", 
+   "dump": {
+    "global init_request": "<function init_request>", 
+    "request": "<Request 'http://erp.manufacturing.com/favicon.ico' [GET]>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "56": "\t\trollback = True", 
+    "57": "", 
+    "58": "\t\tinit_request(request)", 
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:"
+   }, 
+   "lnum": 58
+  }, 
+  {
+   "call": "(request=<Request 'http://erp.manufacturing.com/favicon.ico' [GET]>)", 
+   "dump": {
+    "frappe. auth": "<module 'frappe.auth' from '/home/umoms/moms-bench/apps/frappe/frappe/auth.pyc'>", 
+    "frappe. local": "<werkzeug.local.Local object>", 
+    "frappe.auth. HTTPRequest": "<class frappe.auth.HTTPRequest>", 
+    "frappe.local.http_request": "undefined", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/app.py", 
+   "func": "init_request", 
+   "lines": {
+    "118": "\tmake_form_dict(request)", 
+    "119": "", 
+    "120": "\tfrappe.local.http_request = frappe.auth.HTTPRequest()", 
+    "121": "", 
+    "122": "def make_form_dict(request):"
+   }, 
+   "lnum": 120
+  }, 
+  {
+   "call": "(self=<frappe.auth.HTTPRequest instance>)", 
+   "dump": {
+    "frappe. local": "<werkzeug.local.Local object>", 
+    "frappe.local.login_manager": "undefined", 
+    "global LoginManager": "<class frappe.auth.LoginManager>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/auth.py", 
+   "func": "__init__", 
+   "lines": {
+    "49": "", 
+    "50": "\t\t# login", 
+    "51": "\t\tfrappe.local.login_manager = LoginManager()", 
+    "52": "", 
+    "53": "\t\tif frappe.form_dict._lang:"
+   }, 
+   "lnum": 51
+  }, 
+  {
+   "call": "(self=<frappe.auth.LoginManager instance>)", 
+   "dump": {
+    "builtin True": "True", 
+    "resume": "undefined", 
+    "self": "<frappe.auth.LoginManager instance>", 
+    "self. make_session": "<bound method LoginManager.make_session of <frappe.auth.LoginManager instance>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/auth.py", 
+   "func": "__init__", 
+   "lines": {
+    "111": "\t\t\ttry:", 
+    "112": "\t\t\t\tself.resume = True", 
+    "113": "\t\t\t\tself.make_session(resume=True)", 
+    "114": "\t\t\t\tself.get_user_info()", 
+    "115": "\t\t\t\tself.set_user_info(resume=True)"
+   }, 
+   "lnum": 113
+  }, 
+  {
+   "call": "(self=<frappe.auth.LoginManager instance>, resume=True)", 
+   "dump": {
+    "self": "<frappe.auth.LoginManager instance>", 
+    "self. clear_active_sessions": "<bound method LoginManager.clear_active_sessions of <frappe.auth.LoginManager instance>>"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/auth.py", 
+   "func": "make_session", 
+   "lines": {
+    "185": "\t\tself.user = frappe.local.session_obj.user", 
+    "186": "\t\tfrappe.local.session = frappe.local.session_obj.data", 
+    "187": "\t\tself.clear_active_sessions()", 
+    "188": "", 
+    "189": "\tdef clear_active_sessions(self):"
+   }, 
+   "lnum": 187
+  }, 
+  {
+   "call": "(self=<frappe.auth.LoginManager instance>)", 
+   "dump": {
+    "builtin True": "True", 
+    "frappe. session": "{u'data': {u'session_expiry': u'01:00:00', u'ses...defe834f95929dccccadca48f34771c7d64709529de8b28'}", 
+    "frappe.session. user": "u'vijila_cp@ringlus.in'", 
+    "global clear_sessions": "<function clear_sessions>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "keep_current": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/auth.py", 
+   "func": "clear_active_sessions", 
+   "lines": {
+    "193": "", 
+    "194": "\t\tif frappe.session.user != \"Guest\":", 
+    "195": "\t\t\tclear_sessions(frappe.session.user, keep_current=True)", 
+    "196": "", 
+    "197": "\tdef authenticate(self, user=None, pwd=None):"
+   }, 
+   "lnum": 195
+  }, 
+  {
+   "call": "(user=u'vijila_cp@ringlus.in', keep_current=True, device=None, force=False)", 
+   "dump": {
+    "device": "None", 
+    "global get_sessions_to_clear": "<function get_sessions_to_clear>", 
+    "keep_current": "True", 
+    "sid": "undefined", 
+    "user": "u'vijila_cp@ringlus.in'"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/sessions.py", 
+   "func": "clear_sessions", 
+   "lines": {
+    "42": "\t\treason = \"Force Logged out by the user\"", 
+    "43": "", 
+    "44": "\tfor sid in get_sessions_to_clear(user, keep_current, device):", 
+    "45": "\t\tdelete_session(sid, reason=reason)", 
+    "46": ""
+   }, 
+   "lnum": 44
+  }, 
+  {
+   "call": "(user=u'vijila_cp@ringlus.in', keep_current=True, device=u'desktop')", 
+   "dump": {
+    "frappe. db": "<frappe.database.Database instance>", 
+    "frappe.db. get_value": "<bound method Database.get_value of <frappe.database.Database instance>>", 
+    "global frappe": "<module 'frappe' from '/home/umoms/moms-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "simultaneous_sessions": "undefined", 
+    "user": "u'vijila_cp@ringlus.in'"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/sessions.py", 
+   "func": "get_sessions_to_clear", 
+   "lines": {
+    "60": "\tlimit = 0", 
+    "61": "\tif user == frappe.session.user:", 
+    "62": "\t\tsimultaneous_sessions = frappe.db.get_value('User', user, 'simultaneous_sessions') or 1", 
+    "63": "\t\tlimit = simultaneous_sessions - 1", 
+    "64": ""
+   }, 
+   "lnum": 62
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, doctype=u'User', filters=u'vijila_cp@ringlus.in', fieldname=u'simultaneous_sessions', ignore=None, as_dict=False, debug=False, order_by=None, cache=False)", 
+   "dump": {
+    "cache": "False", 
+    "order_by": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "get_value", 
+   "lines": {
+    "489": "", 
+    "490": "\t\tret = self.get_values(doctype, filters, fieldname, ignore, as_dict, debug,", 
+    "491": "\t\t\torder_by, cache=cache)", 
+    "492": "", 
+    "493": "\t\treturn ((len(ret[0]) > 1 or as_dict) and ret[0] or ret[0][0]) if ret else None"
+   }, 
+   "lnum": 491
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, doctype=u'User', filters=u'vijila_cp@ringlus.in', fieldname=u'simultaneous_sessions', ignore=None, as_dict=False, debug=False, order_by=u'modified desc', update=None, cache=False)", 
+   "dump": {
+    "as_dict": "False", 
+    "debug": "False", 
+    "doctype": "u'User'", 
+    "fields": "[u'simultaneous_sessions']", 
+    "filters": "u'vijila_cp@ringlus.in'", 
+    "out": "None", 
+    "self": "<frappe.database.Database instance>", 
+    "self. get_values_from_single": "<bound method Database.get_values_from_single of <frappe.database.Database instance>>", 
+    "update": "None"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "get_values", 
+   "lines": {
+    "540": "\t\t\t\t\telif (not ignore) and e.args[0]==1146:", 
+    "541": "\t\t\t\t\t\t# table not found, look in singles", 
+    "542": "\t\t\t\t\t\tout = self.get_values_from_single(fields, filters, doctype, as_dict, debug, update)", 
+    "543": "\t\t\t\t\telse:", 
+    "544": "\t\t\t\t\t\traise"
+   }, 
+   "lnum": 542
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, fields=[u'simultaneous_sessions'], filters=u'vijila_cp@ringlus.in', doctype=u'User', as_dict=False, debug=False, update=None)", 
+   "dump": {
+    "as_dict": "False", 
+    "builtin False": "False", 
+    "builtin tuple": "<type 'tuple'>", 
+    "debug": "False", 
+    "doctype": "u'User'", 
+    "fields": "[u'simultaneous_sessions']"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "get_values_from_single", 
+   "lines": {
+    "580": "\t\t\t\tfrom tabSingles where field in (%s) and doctype=%s\"\"\" \\", 
+    "581": "\t\t\t\t\t% (', '.join(['%s'] * len(fields)), '%s'),", 
+    "582": "\t\t\t\t\ttuple(fields) + (doctype,), as_dict=False, debug=debug)", 
+    "583": "\t\t\t# r = _cast_result(doctype, r)", 
+    "584": ""
+   }, 
+   "lnum": 582
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, query=u'select field, value\\n\\t\\t\\t\\tfrom tabSingles where field in (%s) and doctype=%s', values=(u'simultaneous_sessions', u'User'), as_dict=False, as_list=0, formatted=0, debug=False, ignore_ddl=0, as_utf8=0, auto_commit=0, update=None, explain=False)", 
+   "dump": {
+    "query": "u'select field, value\\n\\t\\t\\t\\tfrom tabSingles where field in (%s) and doctype=%s'", 
+    "self": "<frappe.database.Database instance>", 
+    "self. _cursor": "<pymysql.cursors.Cursor object>", 
+    "self._cursor. execute": "<bound method Cursor.execute of <pymysql.cursors.Cursor object>>", 
+    "values": "(u'simultaneous_sessions', u'User')"
+   }, 
+   "file": "/home/umoms/moms-bench/apps/frappe/frappe/database.py", 
+   "func": "sql", 
+   "lines": {
+    "197": "\t\t\t\t\tfrappe.log(values)", 
+    "198": "\t\t\t\t\tfrappe.log(\">>>>\")", 
+    "199": "\t\t\t\tself._cursor.execute(query, values)", 
+    "200": "", 
+    "201": "\t\t\t\tif frappe.flags.in_migrate:"
+   }, 
+   "lnum": 199
+  }, 
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, query=\"select field, value\\n\\t\\t\\t\\tfrom tabSingles where field in ('simultaneous_sessions') and doctype='User'\", args=(u'simultaneous_sessions', u'User'))", 
+   "dump": {
+    "query": "\"select field, value\\n\\t\\t\\t\\tfrom tabSingles where field in ('simultaneous_sessions') and doctype='User'\"", 
+    "result": "undefined", 
+    "self": "<pymysql.cursors.Cursor object>", 
+    "self. _query": "<bound method Cursor._query of <pymysql.cursors.Cursor object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", 
+   "func": "execute", 
+   "lines": {
+    "168": "        query = self.mogrify(query, args)", 
+    "169": "", 
+    "170": "        result = self._query(query)", 
+    "171": "        self._executed = query", 
+    "172": "        return result"
+   }, 
+   "lnum": 170
+  }, 
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, q=\"select field, value\\n\\t\\t\\t\\tfrom tabSingles where field in ('simultaneous_sessions') and doctype='User'\")", 
+   "dump": {
+    "conn": "<pymysql.connections.Connection object>", 
+    "conn. query": "<bound method Connection.query of <pymysql.connections.Connection object>>", 
+    "q": "\"select field, value\\n\\t\\t\\t\\tfrom tabSingles where field in ('simultaneous_sessions') and doctype='User'\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", 
+   "func": "_query", 
+   "lines": {
+    "326": "        self._last_executed = q", 
+    "327": "        self._clear_result()", 
+    "328": "        conn.query(q)", 
+    "329": "        self._do_get_result()", 
+    "330": "        return self.rowcount"
+   }, 
+   "lnum": 328
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, sql=\"select field, value\\n\\t\\t\\t\\tfrom tabSingles where field in ('simultaneous_sessions') and doctype='User'\", unbuffered=False)", 
+   "dump": {
+    "self": "<pymysql.connections.Connection object>", 
+    "self. _affected_rows": "0", 
+    "self. _read_query_result": "<bound method Connection._read_query_result of <pymysql.connections.Connection object>>", 
+    "unbuffered": "False"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "query", 
+   "lines": {
+    "515": "                sql = sql.encode(self.encoding, 'surrogateescape')", 
+    "516": "        self._execute_command(COMMAND.COM_QUERY, sql)", 
+    "517": "        self._affected_rows = self._read_query_result(unbuffered=unbuffered)", 
+    "518": "        return self._affected_rows", 
+    "519": ""
+   }, 
+   "lnum": 517
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, unbuffered=False)", 
+   "dump": {
+    "result": "<pymysql.connections.MySQLResult object>", 
+    "result. read": "<bound method MySQLResult.read of <pymysql.connections.MySQLResult object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_read_query_result", 
+   "lines": {
+    "730": "        else:", 
+    "731": "            result = MySQLResult(self)", 
+    "732": "            result.read()", 
+    "733": "        self._result = result", 
+    "734": "        if result.server_status is not None:"
+   }, 
+   "lnum": 732
+  }, 
+  {
+   "call": "(self=<pymysql.connections.MySQLResult object>)", 
+   "dump": {
+    "first_packet": "undefined", 
+    "self": "<pymysql.connections.MySQLResult object>", 
+    "self. connection": "None", 
+    "self.connection._read_packet": "undefined"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "read", 
+   "lines": {
+    "1073": "    def read(self):", 
+    "1074": "        try:", 
+    "1075": "            first_packet = self.connection._read_packet()", 
+    "1076": "", 
+    "1077": "            if first_packet.is_ok_packet():"
+   }, 
+   "lnum": 1075
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, packet_type=<class 'pymysql.protocol.MysqlPacket'>)", 
+   "dump": {
+    "packet": "<pymysql.protocol.MysqlPacket object>", 
+    "packet. check_error": "<bound method MysqlPacket.check_error of <pymysql.protocol.MysqlPacket object>>"
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "_read_packet", 
+   "lines": {
+    "682": "", 
+    "683": "        packet = packet_type(buff, self.encoding)", 
+    "684": "        packet.check_error()", 
+    "685": "        return packet", 
+    "686": ""
+   }, 
+   "lnum": 684
+  }, 
+  {
+   "call": "(self=<pymysql.protocol.MysqlPacket object>)", 
+   "dump": {
+    "err. raise_mysql_exception": "<function raise_mysql_exception>", 
+    "global err": "<module 'pymysql.err' from '/home/umoms/moms-ben...cal/lib/python2.7/site-packages/pymysql/err.pyc'>", 
+    "self": "<pymysql.protocol.MysqlPacket object>", 
+    "self. _data": "\"\\xffz\\x04#42S02Table 'ce8f7d83a4ad22b8.tabSingles' doesn't exist\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", 
+   "func": "check_error", 
+   "lines": {
+    "218": "            errno = self.read_uint16()", 
+    "219": "            if DEBUG: print(\"errno =\", errno)", 
+    "220": "            err.raise_mysql_exception(self._data)", 
+    "221": "", 
+    "222": "    def dump(self):"
+   }, 
+   "lnum": 220
+  }, 
+  {
+   "call": "(data=\"\\xffz\\x04#42S02Table 'ce8f7d83a4ad22b8.tabSingles' doesn't exist\")", 
+   "dump": {
+    "errno": "1146", 
+    "errorclass": "<class 'pymysql.err.ProgrammingError'>", 
+    "errval": "u\"Table 'ce8f7d83a4ad22b8.tabSingles' doesn't exist\""
+   }, 
+   "file": "/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", 
+   "func": "raise_mysql_exception", 
+   "lines": {
+    "105": "        errval = data[9:].decode('utf-8', 'replace')", 
+    "106": "    else:", 
+    "107": "        errval = data[3:].decode('utf-8', 'replace')", 
+    "108": "    errorclass = error_map.get(errno, InternalError)", 
+    "109": "    raise errorclass(errno, errval)"
+   }, 
+   "lnum": 109
+  }
+ ], 
+ "locals": {
+  "data": "\"\\xffz\\x04#42S02Table 'ce8f7d83a4ad22b8.tabSingles' doesn't exist\"", 
+  "errno": "1146", 
+  "errorclass": "<class 'pymysql.err.ProgrammingError'>", 
+  "errval": "u\"Table 'ce8f7d83a4ad22b8.tabSingles' doesn't exist\"", 
+  "is_41": "True"
+ }, 
+ "pyver": "Python 2.7.15rc1: /home/umoms/moms-bench/env/bin/python (prefix: /home/umoms/moms-bench/env)", 
+ "timestamp": "2019-07-24 10:56:09.232877", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 58, in application\n    init_request(request)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/app.py\", line 120, in init_request\n    frappe.local.http_request = frappe.auth.HTTPRequest()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/auth.py\", line 51, in __init__\n    frappe.local.login_manager = LoginManager()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/auth.py\", line 113, in __init__\n    self.make_session(resume=True)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/auth.py\", line 187, in make_session\n    self.clear_active_sessions()\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/auth.py\", line 195, in clear_active_sessions\n    clear_sessions(frappe.session.user, keep_current=True)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/sessions.py\", line 44, in clear_sessions\n    for sid in get_sessions_to_clear(user, keep_current, device):\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/sessions.py\", line 62, in get_sessions_to_clear\n    simultaneous_sessions = frappe.db.get_value('User', user, 'simultaneous_sessions') or 1\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 491, in get_value\n    order_by, cache=cache)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 542, in get_values\n    out = self.get_values_from_single(fields, filters, doctype, as_dict, debug, update)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 582, in get_values_from_single\n    tuple(fields) + (doctype,), as_dict=False, debug=debug)\n  File \"/home/umoms/moms-bench/apps/frappe/frappe/database.py\", line 199, in sql\n    self._cursor.execute(query, values)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py\", line 170, in execute\n    result = self._query(query)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py\", line 328, in _query\n    conn.query(q)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 517, in query\n    self._affected_rows = self._read_query_result(unbuffered=unbuffered)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 732, in _read_query_result\n    result.read()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 1075, in read\n    first_packet = self.connection._read_packet()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 684, in _read_packet\n    packet.check_error()\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py\", line 220, in check_error\n    err.raise_mysql_exception(self._data)\n  File \"/home/umoms/moms-bench/env/local/lib/python2.7/site-packages/pymysql/err.py\", line 109, in raise_mysql_exception\n    raise errorclass(errno, errval)\nProgrammingError: (1146, u\"Table 'ce8f7d83a4ad22b8.tabSingles' doesn't exist\")\n"
+}

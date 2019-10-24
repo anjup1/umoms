@@ -1,0 +1,3 @@
+item name                      qty               delivery date 
+
+MCC-X63-B-20-20-XX               1               28-06-2019
